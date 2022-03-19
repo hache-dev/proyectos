@@ -1,0 +1,14 @@
+#contenedor {
+    height: 1050px;
+}
+/*#contenedor #contenedorweb #productosc {
+    _text-align: right;
+}*/
+
+#contenedor #categorias {
+    *width: 230px;
+}
+
+#contenedor #categorias .menu ul {
+    *margin:15px 0px 0px 40px;
+}

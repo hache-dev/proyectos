@@ -1,0 +1,411 @@
+/*
+Oldesign.com.ar
+---------------
+
+  @Author : Fernando Caceres
+  @Client: WishDeath Game Servers
+  @Date: 19.02.2010
+  @Description: CSS 2.1 - WishDeath.com.ar
+
+---------------
+*/
+
+
+/*
+ ------
+ CUERPO
+ ------
+*/
+body {
+    background: #000000;
+    margin: 0px 0px 0px 0px;
+    
+}
+
+/*
+ --------------
+ CONTENEDOR WEB
+ --------------
+*/
+#contenedor {
+    background: url(imagenes/bg.gif) #000000 repeat-y center;
+    width: 996px;
+    height: 100%;
+    margin: 0px auto;
+}
+
+/*
+ ------
+ HEADER
+ ------
+*/
+#header {
+    background: url(imagenes/header.jpg) no-repeat center;
+    width: 950px;
+    height: 130px;
+    margin: 0px auto;
+}
+#header #iconos {
+    float:right;
+    margin: 35px 100px 0px 0px;
+    _margin: 35px 50px 0px 0px; /* add ie fix */
+}
+#header #iconos #csico{
+    float: left;
+    padding-left: 40px;
+}
+#header #iconos #cssico {
+    float: left;
+    padding-left: 40px;
+}
+#header #iconos #tsico {
+    float: left;
+    padding-left: 40px;
+}
+#header #iconos #linuxico{
+    float: left;
+    padding-left: 40px;
+}
+
+/*
+ ----------
+ NAVIGATION
+ ----------
+*/
+#nav {
+    background: url(imagenes/bgnav.jpg) #CCC repeat-x center;
+    width: 912px;
+    height: 35px;
+    margin:0px auto;
+    text-align: center;
+    text-shadow: #FFFFFF 1px 1px 0px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #000000;
+}
+#nav ul {
+    margin: 0px auto;
+    list-style: none;
+    padding:10px 0px 0px 0px;
+    background: transparent;
+}
+#nav ul li {
+    display: inline;
+    margin: 20px;
+    background: transparent;
+}
+#nav ul li a:link, #nav ul li a:visited{
+    text-decoration: none;
+    color: #000000;
+    background: transparent;
+}
+#nav ul li a:hover, #nav ul li a:active{
+    text-decoration: none;
+    color: #580809;
+    background: transparent;
+}
+/*
+ ----
+ INFO
+ ----
+*/
+#info {
+    background: #232323;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: #7b7b7b;
+    text-shadow: #000000 1px 1px 0px;
+    width: 912px;
+    height: 30px;
+    margin: 0px auto;
+}
+#info #pad {
+    padding:8px 0px 0px 15px;
+}
+
+/*
+ ---------
+ CONTENIDO
+ ---------
+*/
+.contenido {
+    width: 912px;
+    margin: 0px auto;
+}
+
+/*
+ -----------
+ PROMOCIONES
+ -----------
+*/
+.promociones {
+    float:left;
+    width: 604px;
+    background-color: #000;
+}
+.promociones .bar {
+    background: url(imagenes/contenidobgbar.jpg) #000000 no-repeat center bottom;
+    height: 60px;
+}
+.promociones .bar .texto {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+    color:#FFFFFF;
+    text-shadow: #000000 1px 1px 0px;
+    letter-spacing: 1px;
+    padding:32px 0px 0px 150px;
+}
+.promociones .contenidopromociones {
+    background: url(imagenes/contenidobgcon.jpg) repeat-y;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    color: #B4B4B4;
+}
+.promociones .contenidopromociones .pad {
+    padding: 5px 5px 5px 5px;
+}
+.promociones .contenidopromociones .pie {
+    background: url(imagenes/contenidogpie.jpg) no-repeat;
+    width: 604px;
+    height: 20px;
+}
+
+/*
+ ----------
+ SERVIDORES
+ ----------
+*/
+.servidores {
+    float:right;
+    width: 301px;
+    background: #000000;
+}
+.servidores .bar {
+    background: url(imagenes/sidebarbgbar.jpg) #000000 no-repeat center bottom;
+    height: 60px;
+}
+.servidores .bar .texto {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+    color:#FFFFFF;
+    text-shadow: #000000 1px 1px 0px;
+    letter-spacing: 1px;
+    padding:32px 0px 0px 150px;
+}
+.servidores .contenidoservidores {
+    background: url(imagenes/sidebarbgcon.jpg) repeat-y;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    color: #B4B4B4;
+}
+.servidores .contenidoservidores .pad {
+    padding: 5px 5px 5px 5px;
+}
+.servidores .contenidoservidores .pie {
+    background: url(imagenes/sidebarbgpie.jpg) no-repeat;
+    width: 301px;
+    height: 19px;
+}
+
+/*
+ ----------
+ MARQUESINA
+ ----------
+*/
+.marquesina {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    color: #B4B4B4;
+}
+.marquesina .titulo {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    color: #DF3224;
+    text-decoration: underline;
+}
+.marquesina ul {
+    list-style: none;
+    padding:0px 0px 0px 18px;
+}
+.marquesina a:link, .marquesina a:visited {
+    text-decoration: none;
+    color: #B4B4B4;
+}
+.marquesina a:hover, .marquesina a:active {
+    text-decoration: underline;
+    color: #DF3224;
+}
+
+/*
+ ---------
+ DESCARGAS
+ ---------
+*/
+.descargas {
+    float:right;
+    width: 301px;
+    background: #000000;
+    clear:both; /* add */
+}
+.descargas .bar {
+    background: url(imagenes/sidebarbgbar.jpg) #000000 no-repeat center bottom;
+    height: 60px;
+}
+.descargas .bar .texto {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+    color:#FFFFFF;
+    text-shadow: #000000 1px 1px 0px;
+    letter-spacing: 1px;
+    padding:32px 0px 0px 150px;
+}
+.descargas .contenidodescargas {
+    background: url(imagenes/sidebarbgcon.jpg) repeat-y;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    color: #B4B4B4;
+}
+.descargas .contenidodescargas .pad {
+    padding: 5px 5px 5px 5px;
+}
+.descargas .contenidodescargas .pie {
+    background: url(imagenes/sidebarbgpie.jpg) no-repeat;
+    width: 301px;
+    height: 19px;
+}
+
+/*
+ ------
+ JUEGOS
+ ------
+*/
+.juegos {
+    width: 912px;
+    float:left;
+    margin: 0px auto;
+}
+.juegos .bar {
+    background: url(imagenes/contenidobgbarg.jpg) #000000 no-repeat center bottom;
+    height: 60px;
+}
+.juegos .bar .texto {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+    color:#FFFFFF;
+    text-shadow: #000000 1px 1px 0px;
+    letter-spacing: 1px;
+    padding:32px 0px 0px 150px;
+}
+.juegos .contenidojuegos {
+    background: url(imagenes/contenidobgcong.jpg) repeat-y;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    color: #B4B4B4;
+}
+.juegos .contenidojuegos .pad {
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+}
+.juegos .contenidojuegos .pie {
+    background: url(imagenes/contenidogpieg.jpg) no-repeat;
+    width: 912px;
+    height: 19px;
+}
+
+/*
+ --------
+ NOTICIAS
+ --------
+*/
+.noticias {
+    width: 912px;
+    float:left;
+    margin: 0px auto;
+}
+.noticias .bar {
+    background: url(imagenes/contenidobgbarg.jpg) #000000 no-repeat center bottom;
+    height: 60px;
+}
+.noticias .bar .texto {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+    color:#FFFFFF;
+    text-shadow: #000000 1px 1px 0px;
+    letter-spacing: 1px;
+    padding:32px 0px 0px 150px;
+}
+.noticias .contenidonoticias {
+    background: url(imagenes/contenidobgcong.jpg) repeat-y;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    color: #B4B4B4;
+}
+.noticias .contenidonoticias .pad {
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+}
+.noticias .contenidonoticias .pie {
+    background: url(imagenes/contenidogpieg.jpg) no-repeat;
+    width: 912px;
+    height: 19px;
+    margin:0px 0px 20px 0px;
+}
+
+/*
+ ------
+ FOOTER
+ ------
+*/
+#footer {
+    width: 912px;
+    margin: 0px auto;
+    clear: both;
+}
+#footer #copyright{
+    background: #0E0E0E no-repeat;
+    height: 60px;
+    width: 912px;
+}
+#footer #copyright #texto {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    color: #B4B4B4;
+    padding: 10px 0px 0px 0px;
+    text-align:center;
+}
+#footer #navfooter {
+    background: url(imagenes/footerbg.jpg) repeat-x center;
+    width: 912px;
+    height: 35px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+#footer #navfooter ul {
+    margin: 0px auto;
+    list-style: none;
+    padding:12px 0px 0px 0px;
+    background: transparent;
+}
+#footer #navfooter ul li {
+    display: inline;
+    margin: 10px;
+    background: transparent;
+}
+
+#footer #navfooter a:link, #footer #navfooter a:visited {
+    text-decoration:none;
+    color: #FFFFFF;
+}
+#footer #navfooter a:hover, #footer #navfooter a:active {
+    text-decoration:none;
+    color:#FFFFFF;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XML Configuration file for Google Sitemaps -->
+<site base_url="http://www.arosil.com.ar/" store_into="www.arosil.com.ar/sitemap.xml" verbose="1">
+
+ <url href="http://www.arosil.com.ar/" lastmod="2010-03-02T20:30:30+00:00" />
+ <url href="http://www.arosil.com.ar/catalogo.html" lastmod="2010-03-02T20:30:31+00:00" />
+ <url href="http://www.arosil.com.ar/contacto.html" lastmod="2010-03-02T20:30:32+00:00" />
+ <url href="http://www.arosil.com.ar/empresa.html" lastmod="2010-03-02T20:30:31+00:00" />
+ <url href="http://www.arosil.com.ar/esquineros.html" />
+ <url href="http://www.arosil.com.ar/inicio.html" lastmod="2010-03-02T20:30:30+00:00" />
+ <url href="http://www.arosil.com.ar/promociones.html" />
+ <url href="http://www.arosil.com.ar/puff.html" />
+ <url href="http://www.arosil.com.ar/sillones.html" />
+ <url href="http://www.arosil.com.ar/sofas.html" />
+ <url href="http://www.arosil.com.ar/ubicacion.html" lastmod="2010-03-02T20:30:31+00:00" />
+
+ <filter action="drop" type="wildcard" pattern="*~" />
+ <filter action="drop" type="regexp" pattern="/\.[^/]*$" />
+ <filter action="noindex" type="wildcard" pattern="*/index.htm*" />
+
+</site>

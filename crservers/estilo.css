@@ -1,0 +1,164 @@
+/*
+Oldesign.com.ar
+---------------
+
+  @Author : Fernando Caceres
+  @Client: CRSERVERS.com.ar
+  @Date: 22.09.2010
+  @Description: CSS 2.1 - CRSERVERS.com.ar
+
+---------------
+*/
+
+/*
+ ----
+ BODY
+*/
+
+BODY {
+    margin-top: 15%;
+    background: url(img/bg.jpg) repeat-x #444444;
+}
+
+/*
+ ---------
+ CONTENIDO
+ ---------
+*/
+
+#cont {
+    margin: 0px auto;
+    background: url(img/conbg.png) no-repeat center;
+    width: 678px;
+    height: 366px;
+}
+
+/*
+ -----
+ LOGO
+ ----
+*/
+
+#cont #logo {
+    margin: 0px auto;
+    padding: 120px 0px 0px 0px;
+    width: 260px;
+    height: 82px;
+}
+
+/*
+ -----
+ BOTON
+ -----
+*/
+
+#cont #boton {
+    margin: 0px auto;
+    padding: 20px 0px 0px 0px;
+    height: 83px;
+    width: 29px;
+}
+
+/*
+ ----------
+ FORMULARIO
+ ----------
+*/
+
+#form {
+    margin: 0px auto;
+    width: 500px;
+}
+
+/*
+ -----------
+ AREA CAMPOS
+ -----------
+*/
+
+#form .inputt {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: #FFFFFF 1px 1px 0px;
+    color: #9C9C9C;
+}
+    
+#form .inputr {
+    margin: 5px;
+    padding: 0px 0px 0px 5px;
+    font-family: Tahoma, Geneva, sans-serif;
+    border: #CCCCCC 2px solid;
+    background: url(img/requerido.png) #FFFFFF no-repeat right;
+    height: 25px;
+    width: 400px;
+}
+
+#form #inputo {
+    margin: 5px;
+    padding: 0px 0px 0px 5px;
+    font-family: Tahoma, Geneva, sans-serif;
+    border: #CCCCCC 2px solid;
+    background: url(img/opcional.png) #FFFFFF no-repeat right;
+    height: 25px;
+    width: 400px;
+}
+
+/*
+ ------------
+ AREA MENSAJE
+ ------------
+*/
+
+#form #mensajet {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: #FFFFFF 1px 1px 0px;
+    color: #9C9C9C;
+    vertical-align: top;
+}
+
+#form #mensajec {
+    margin: 5px;
+    padding: 0px 0px 0px 5px;
+    font-family: Tahoma, Geneva, sans-serif;
+    border: #CCCCCC 2px solid;
+    height: 150px;
+    width: 400px;
+}
+
+/*
+ ------
+ ENVIAR
+ ------
+*/
+
+#enviar {
+    margin: 5px 5px 5px 0px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 13px;
+    text-shadow: #5A6885 1px 1px 0px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    border: none;
+    background: url(img/enviar.png) no-repeat center;
+    height: 25px;
+    width: 60px;
+}
+
+/*
+ --------
+ CONTACTO
+ --------
+*/
+
+#cont #contacto {
+    margin: 0px auto;
+    padding: 183px 0px 0px 0px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 15px;
+    color: #4C5967;
+    text-shadow: #FFFFFF 1px 1px 0px;
+    text-align: center;
+}

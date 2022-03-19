@@ -1,0 +1,115 @@
+/*
+tHDesign Style
+-----------------------------------
+@Author : Fernando Cáceres
+@Client: Ars Interiores
+@Date: 18.06.2010
+@Description: Style Ars Interiores Web Site
+-----------------------------------
+*/
+
+
+#contenedor {
+
+    *height: 960px; /* fix ie */
+
+}
+
+/*
+ --------
+ CABECERA
+ --------
+*/
+
+
+
+#contenedor #cabecera #datos a:link, #contenedor #cabecera #datos a:visited{
+    *text-decoration: underline;  /* fix ie */
+    *border-bottom: none;  /* fix ie */
+}
+
+/*
+ ----
+ MENU
+ ----
+*/
+
+#contenedor #menu {
+    *margin: 10px auto; /* fix ie*/
+}
+
+
+/*
+ ---------
+ SLIDESHOW
+ ---------
+*/
+
+#contenedor #slide {
+    *margin-bottom: 10px; /* fix ie7 */
+}
+
+/*
+ --------------
+ CONTENEDOR WEB
+ --------------
+*/
+
+#contenedorweb {
+    *margin-bottom: 10px; /* fix ie */
+    *margin-top: 0px; /* fix ie */
+}
+
+#contenedorweb #contenido .centro {
+    *height: 472px; /* fix ie */
+}
+
+/*
+ ------------------------
+ SIDEBAR: ALGUNOS MODELOS
+ ------------------------
+*/
+
+#contenedorweb #sidebar {
+    *margin: 0px 0px 0px 7px;
+}
+
+#contenedorweb #sidebar #algunosmodelos .abajo {
+    *margin: 0px 0px 0px 0px; /* fix ie */
+}
+
+/*
+ -------
+ OFERTAS
+ -------
+*/
+
+#contenedorweb #sidebar #ofertas {
+    *float: not; /* fix ie */
+    *margin: 13px 0px 0px 0px /* fix ie7*/
+
+}
+
+/*
+ -------------------
+ ATENCION AL CLIENTE
+ -------------------
+*/
+#contenedorweb #sidebar #atencionalcliente {
+    *margin: 0px 0px 0px 0px; /* fix ie */
+    *float: not; /* fix ie */
+}
+
+#contenedorweb #sidebar #atencionalcliente #abajo {
+    *margin: 0px 0px 0px 0px; /* fix ie */
+}
+
+/*
+ ------
+ FOOTER
+ ------
+*/
+
+#contenedor #footer {
+    *margin-bottom: 5px; /* fix ie */
+}

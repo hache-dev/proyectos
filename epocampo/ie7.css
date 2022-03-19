@@ -1,0 +1,11 @@
+#contenido_web #contacto {
+    *height: 371px;
+}
+
+#contenido_web #ser_revendedor {
+    *height: 370px;
+}
+
+#cabecera #cabecera_cen #menu .mas_productos div {
+    *margin-top: 7px;
+}

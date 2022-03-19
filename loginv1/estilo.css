@@ -1,0 +1,125 @@
+BODY {
+    background: url(images/bg.jpg) #f0f0f0 repeat-x;
+    margin: 0px auto;
+
+}
+
+INPUT:focus{ 
+    outline: none; 
+}
+
+#login {
+    margin: 0px auto;
+    margin-top: 15%;
+    width: 526px;
+    height: 321px;
+}
+
+#login #top {
+    background: url(images/login-top.png) no-repeat center;
+    margin: 0px auto;
+    width: 526px;
+    height: 57px;
+}
+
+#login #top #title {
+    background: url(images/login-user.png) no-repeat 30px 30px;
+    width: 50px;
+    padding: 30px 0px 0px 50px;
+    text-align: right;
+    text-shadow: 1px 1px 1px #FFFFFF;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #8a8a8a;
+    float:left;
+}
+
+#login #top #help {
+    padding: 30px 0px 0px 380px;
+    float: left;
+}
+
+#login #login-form {
+    background: url(images/login-bg.png) repeat-y;
+    padding: 30px 0px 10px 0px;
+    overflow: auto;
+}
+
+#login #login-form #lock {
+    padding: 0px 0px 0px 60px;
+    float:left;
+}
+
+#login #login-form #form {
+    float:left;
+}
+
+#login #login-form #form .input {
+    margin: 0px 0px 10px 25px;
+}
+
+#login #login-form #form .text {
+    width: 100px;
+    padding: 5px 10px 0px 0px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color: #000000;
+    text-align: right;
+    float:left;
+}
+
+#login #login-form #form .input #user {
+    width: 183px;
+    height: 23px;
+    border-left: solid 1px #48544d;
+    border-top: solid 1px #48544d;
+    border-bottom: solid 1px #e7eae8;
+    border-right: solid 1px #e7eae8;
+}
+
+#login #login-form #form .input #pass {
+    width: 183px;
+    height: 22px;
+    border-left: solid 1px #48544d;
+    border-top: solid 1px #48544d;
+    border-bottom: solid 1px #e7eae8;
+    border-right: solid 1px #e7eae8;
+}
+
+#login #login-form #form #button {
+    width: 105px;
+    height: 26px;
+    margin: 0px 0px 30px 215px;
+}
+
+#login #login-form #info {
+    width: 450px;
+    height: 20px;
+    margin: 0px auto;
+    padding: 5px 0px 20px 0px;
+    border-top: solid 1px #e6e6e6;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    color: #717171;
+    overflow: hidden;
+}
+
+#login #login-form #info #register a:link, #login #login-form #info #register a:visited{
+    text-decoration: none;
+    color: #717171;
+    float:left;
+}
+
+#login #login-form #info #lostpass a:link, #login #login-form #info #lostpass a:visited{
+    text-decoration: none;
+    color: #717171;
+    float:right;
+}
+
+#login #login-foot {
+    width: 567px;
+    height: 81px;
+    margin: 0px 0px 0px -19px;
+}

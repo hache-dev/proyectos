@@ -1,0 +1,58 @@
+#cabecera #cabecera_cen #menu {
+    _margin-top: 2px;
+    _margin-left: 14px;
+}
+
+#cabecera #cabecera_cen #menu .mas_productos div {
+    _margin-top: 7px;
+}
+
+#contenido_web #ser_revendedor {
+    _margin-left: -5px;
+    _height: 376px;
+}
+
+#cabecera #cabecera_arb {
+    _margin-bottom: -1px;
+}
+
+#contenido_web #ser_revendedor #revendedor_tit_abj {
+    _margin-top: -1px;
+}
+
+#contenido_web #contacto #contacto_tit_arb {
+    _margin-bottom: -1px;
+}
+
+#contenido_web #contacto #contacto_tit_abj {
+    _margin-top: -1px;
+}
+
+#contenido_web #quienes_somos #quienes_somos_tit_abj {
+    _margin-top: -2px;
+}
+
+#contenido_web #quienes_somos #quienes_somos_texto {
+    _margin: 0px 0px 0px 7px;
+}
+
+#contenido_web #quienes_somos #video #video_abj {
+    _margin-top: -2px;
+}
+
+
+#contenido_web #quienes_somos #video {
+    _margin: -51px 0px 0px 26px;
+}
+
+#contenido_web #quienes_somos #video #video_texto {
+    _margin: 0px 0px 0px 4px
+}
+
+#pie #pie_arb {
+    _margin-bottom: -1px;
+}
+
+#contenido_web #productos #productos_tit_arb {
+    _margin-bottom: -1px;
+}

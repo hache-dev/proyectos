@@ -1,0 +1,143 @@
+/*
+ * SimpleModal OSX Style Modal Dialog
+ * http://www.ericmmartin.com/projects/simplemodal/
+ * http://code.google.com/p/simplemodal/
+ *
+ * Copyright (c) 2010 Eric Martin - http://ericmmartin.com
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *
+ * Revision: $Id: osx.css 254 2010-07-23 05:14:44Z emartin24 $
+ */
+
+#osx-modal-content, #osx-modal-data {display:none;}
+
+/* Overlay */
+#osx-overlay {background-color:#000; cursor:wait;}
+
+/* Container */
+#osx-container {background-color:#484848; color:#FFFFFF; font: 16px/24px "Lucida Grande",Arial,sans-serif; padding-bottom:4px; width:600px; -moz-border-radius-bottomleft:6px; -webkit-border-bottom-left-radius:6px; -moz-border-radius-bottomright:6px; -webkit-border-bottom-right-radius:6px; border-radius:0 0 6px 6px; -moz-box-shadow:0 0 64px #000; -webkit-box-shadow:0 0 64px #000; box-shadow:0 0 64px #000;}
+#osx-container a {color:#ddd;}
+#osx-container #osx-modal-title {
+    height: 40px;
+    color: #FFFFFF;
+    background: url(imagenes/bg.png) repeat-x -120px 0px;
+    font-weight: bold;
+    padding:6px 8px;
+    text-shadow:0 1px 0 #000000;
+}
+#osx-container .close {display:none; position:absolute; right:0; top:0;}
+#osx-container .close a {display:block; color:#777; font-weight:bold; padding:6px 12px 0; text-decoration:none; text-shadow:0 1px 0 #f4f4f4;}
+#osx-container .close a:hover {color:#FFF;}
+#osx-container #osx-modal-data {font-size:12px; padding:6px 12px;}
+#osx-container h2 {margin:10px 0 6px;}
+#osx-container p {margin-bottom:10px; text-align: center;}
+#osx-container span {color:#777;}
+
+
+/*Branca-Team 2*/
+
+#osx-modal-content1, #osx-modal-data1 {display:none;}
+
+/* Overlay */
+#osx-overlay1 {background-color:#000; cursor:wait;}
+
+/* Container */
+#osx-container1 {background-color:#484848; color:#FFFFFF; font: 16px/24px "Lucida Grande",Arial,sans-serif; padding-bottom:4px; width:600px; -moz-border-radius-bottomleft:6px; -webkit-border-bottom-left-radius:6px; -moz-border-radius-bottomright:6px; -webkit-border-bottom-right-radius:6px; border-radius:0 0 6px 6px; -moz-box-shadow:0 0 64px #000; -webkit-box-shadow:0 0 64px #000; box-shadow:0 0 64px #000;}
+#osx-container1 a {color:#ddd;}
+#osx-container1 #osx-modal-title1 {
+    height: 40px;
+    color: #FFFFFF;
+    background: url(imagenes/bg.png) repeat-x -120px 0px;
+    font-weight: bold;
+    padding:6px 8px;
+    text-shadow:0 1px 0 #000000;
+}
+#osx-container1 .close1 {display:none; position:absolute; right:0; top:0;}
+#osx-container1 .close1 a {display:block; color:#777; font-weight:bold; padding:6px 12px 0; text-decoration:none; text-shadow:0 1px 0 #f4f4f4;}
+#osx-container1 .close1 a:hover {color:#FFF;}
+#osx-container1 #osx-modal-data1 {font-size:12px; padding:6px 12px;}
+#osx-container1 h2 {margin:10px 0 6px;}
+#osx-container1 p {margin-bottom:10px; text-align: center;}
+#osx-container1 span {color:#777;}
+
+/*Branca-Team 3*/
+
+#osx-modal-content2, #osx-modal-data2 {display:none;}
+
+/* Overlay */
+#osx-overlay2 {background-color:#000; cursor:wait;}
+
+/* Container */
+#osx-container2 {background-color:#484848; color:#FFFFFF; font: 16px/24px "Lucida Grande",Arial,sans-serif; padding-bottom:4px; width:600px; -moz-border-radius-bottomleft:6px; -webkit-border-bottom-left-radius:6px; -moz-border-radius-bottomright:6px; -webkit-border-bottom-right-radius:6px; border-radius:0 0 6px 6px; -moz-box-shadow:0 0 64px #000; -webkit-box-shadow:0 0 64px #000; box-shadow:0 0 64px #000;}
+#osx-container2 a {color:#ddd;}
+#osx-container2 #osx-modal-title2 {
+    height: 40px;
+    color: #FFFFFF;
+    background: url(imagenes/bg.png) repeat-x -120px 0px;
+    font-weight: bold;
+    padding:6px 8px;
+    text-shadow:0 1px 0 #000000;
+}
+#osx-container2 .close2 {display:none; position:absolute; right:0; top:0;}
+#osx-container2 .close2 a {display:block; color:#777; font-weight:bold; padding:6px 12px 0; text-decoration:none; text-shadow:0 1px 0 #f4f4f4;}
+#osx-container2 .close2 a:hover {color:#FFF;}
+#osx-container2 #osx-modal-data2 {font-size:12px; padding:6px 12px;}
+#osx-container2 h2 {margin:10px 0 6px;}
+#osx-container2 p {margin-bottom:10px; text-align: center;}
+#osx-container2 span {color:#777;}
+
+
+/*Branca-Team 4*/
+
+#osx-modal-content3, #osx-modal-data3 {display:none;}
+
+/* Overlay */
+#osx-overlay3 {background-color:#000; cursor:wait;}
+
+/* Container */
+#osx-container3 {background-color:#484848; color:#FFFFFF; font: 16px/24px "Lucida Grande",Arial,sans-serif; padding-bottom:4px; width:600px; -moz-border-radius-bottomleft:6px; -webkit-border-bottom-left-radius:6px; -moz-border-radius-bottomright:6px; -webkit-border-bottom-right-radius:6px; border-radius:0 0 6px 6px; -moz-box-shadow:0 0 64px #000; -webkit-box-shadow:0 0 64px #000; box-shadow:0 0 64px #000;}
+#osx-container3 a {color:#ddd;}
+#osx-container3 #osx-modal-title3 {
+    height: 40px;
+    color: #FFFFFF;
+    background: url(imagenes/bg.png) repeat-x -120px 0px;
+    font-weight: bold;
+    padding:6px 8px;
+    text-shadow:0 1px 0 #000000;
+}
+#osx-container3 .close3 {display:none; position:absolute; right:0; top:0;}
+#osx-container3 .close3 a {display:block; color:#777; font-weight:bold; padding:6px 12px 0; text-decoration:none; text-shadow:0 1px 0 #f4f4f4;}
+#osx-container3 .close3 a:hover {color:#FFF;}
+#osx-container3 #osx-modal-data3 {font-size:12px; padding:6px 12px;}
+#osx-container3 h2 {margin:10px 0 6px;}
+#osx-container3 p {margin-bottom:10px; text-align: center;}
+#osx-container3 span {color:#777;}
+
+
+/*Branca-Team 5*/
+
+#osx-modal-content4, #osx-modal-data4 {display:none;}
+
+/* Overlay */
+#osx-overlay4 {background-color:#000; cursor:wait;}
+
+/* Container */
+#osx-container4 {background-color:#484848; color:#FFFFFF; font: 16px/24px "Lucida Grande",Arial,sans-serif; padding-bottom:4px; width:600px; -moz-border-radius-bottomleft:6px; -webkit-border-bottom-left-radius:6px; -moz-border-radius-bottomright:6px; -webkit-border-bottom-right-radius:6px; border-radius:0 0 6px 6px; -moz-box-shadow:0 0 64px #000; -webkit-box-shadow:0 0 64px #000; box-shadow:0 0 64px #000;}
+#osx-container4 a {color:#ddd;}
+#osx-container4 #osx-modal-title4 {
+    height: 40px;
+    color: #FFFFFF;
+    background: url(imagenes/bg.png) repeat-x -120px 0px;
+    font-weight: bold;
+    padding:6px 8px;
+    text-shadow:0 1px 0 #000000;
+}
+#osx-container4 .close4 {display:none; position:absolute; right:0; top:0;}
+#osx-container4 .close4 a {display:block; color:#777; font-weight:bold; padding:6px 12px 0; text-decoration:none; text-shadow:0 1px 0 #f4f4f4;}
+#osx-container4 .close4 a:hover {color:#FFF;}
+#osx-container4 #osx-modal-data4 {font-size:12px; padding:6px 12px;}
+#osx-container4 h2 {margin:10px 0 6px;}
+#osx-container4 p {margin-bottom:10px; text-align: center;}
+#osx-container4 span {color:#777;}

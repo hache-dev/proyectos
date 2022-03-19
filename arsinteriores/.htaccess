@@ -1,0 +1,18 @@
+# -FrontPage-
+
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+
+<Limit GET POST>
+order deny,allow
+deny from all
+allow from all
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+AuthName arsinteriores.com.ar
+
+Options All -Indexes
+ErrorDocument 404 /404.shtml
+ErrorDocument 403 /403.shtml

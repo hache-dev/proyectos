@@ -1,0 +1,338 @@
+html {
+    min-height: 100%;
+    
+}
+
+
+
+    /*margin: 0px auto;
+    width: 830px;
+    background: rgb(98,157,166);
+    background: -moz-linear-gradient(0deg, rgba(98,157,166,1) 0%, rgba(69,113,118,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(98,157,166,1) 0%, rgba(69,113,118,1) 100%);
+    background: linear-gradient(0deg, rgba(98,157,166,1) 0%, rgba(69,113,118,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#629da6",endColorstr="#457176",GradientType=1);*/
+
+    BODY {
+        margin: 0px auto;
+        width: 810px;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 10s ease infinite;
+    }
+    
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+header {
+    height: 200px;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid #BABABA;
+    background-color: #EEEEEE;
+    background-position-y: center;
+    background-position-x: right;
+    border-top: none;
+    background-image: url("https://interioresruta8.com/wp-content/uploads/2014/03/wallpaper-white-13.png");
+}
+header .title h1 {
+    padding-top: 50px;
+    margin: 0px auto;
+    height: max-content;
+    width: max-content;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 70px;
+    text-align: center;
+    color: #E0E0E0;
+    text-shadow: rgba(75, 75, 75, 0.2) 1px 2px 1px,rgba(255,255,255,.4) 0 -4px 30px;
+    background: #23A6D4;
+    background: -webkit-radial-gradient(circle farthest-corner at center center, #23A6D4 0%, #BE5290 100%);
+    background: -moz-radial-gradient(circle farthest-corner at center center, #23A6D4 0%, #BE5290 100%);
+    background: radial-gradient(circle farthest-corner at center center, #23A6D4 0%, #BE5290 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+.content {
+    margin: 20px 0px 0px 0px;
+    padding: 0px 0px 10px 0px;
+    width: 500px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #DFDFDF;
+}
+
+
+.content .title {
+    height: 40px;
+    padding: 10px 0px 0px 10px;
+    margin: 0px 0px 10px 0px;
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 50%, rgba(221,221,221,1) 50%, rgba(223,223,223,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 50%, rgba(221,221,221,1) 50%, rgba(223,223,223,1) 100%);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 50%, rgba(221,221,221,1) 50%, rgba(223,223,223,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#dfdfdf",GradientType=1);
+    border: 1px solid #BABABA;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 24px;
+    color: #00606A;
+    border-style: double;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
+}
+.content .icon {
+    float: left;
+    padding: 0px 10px 0px 0px;
+    background-image: url("https://img.icons8.com/external-rabit-jes-outline-color-rabit-jes/32/000000/external-book-education-rabit-jes-outline-color-rabit-jes.png");
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+}
+.content .posts {
+    padding: 10px;
+    margin: 0px auto;
+    width: 460px;
+    background-color: #EEEEEE;
+    border: 1px solid #BABABA;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 11px;
+}
+
+.content article {
+    margin: 0px auto;
+    height: 122px;
+    margin-bottom: 10px;
+    width: 430px;
+    border: 1px solid #BABABA;
+}
+
+.content article .thumb {
+    height: 120px;
+    width: 120px;
+    margin: 0px 5px 0px 0px;
+    float:left;
+    border: 1px solid #FFFFFF;
+    border-style:ridge;
+}
+
+.content article .text {
+    padding: 5px 0px 0px 0px;;
+    color: #00606A;
+    font-size: 11px;
+    height: 80px;
+    width: 420px;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
+
+}
+
+.content article .text .title-posts h3{
+    color: #606060;
+    font-size: 12px;
+    margin: 0px 0px 5px 0px;
+    font-weight: lighter;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
+}
+
+.content-pagination {
+    float: left;
+    margin: 10px 30px 10px 0px;
+    padding: 5px 0px 0px 0px;
+    height: 25px;
+    width: 500px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #DFDFDF;
+}
+
+.content-pagination .text {
+    margin: 0px auto;
+    width: 480px;
+    height: 18px;
+    background-color: #EEEEEE;
+    border: 1px solid #BABABA;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 11px;
+    color: #00606A;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
+}
+
+.content-pagination .text .left{
+    padding-top: 3px;
+    float:left;
+    margin-left: 10px;
+}
+
+.content-pagination .text .right{
+    padding-top: 3px;
+ float: right;
+ margin-right: 10px;
+}
+
+.aside {
+    margin: 20px 0px 0px 0px;
+    padding: 0px 0px 10px 0px;
+    float: right;
+    width: 280px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #DFDFDF;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
+}
+
+.aside .title {
+    height: 40px;
+    padding: 10px 0px 0px 10px;
+    margin: 0px 0px 10px 0px;
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 50%, rgba(221,221,221,1) 50%, rgba(223,223,223,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 50%, rgba(221,221,221,1) 50%, rgba(223,223,223,1) 100%);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 50%, rgba(221,221,221,1) 50%, rgba(223,223,223,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#dfdfdf",GradientType=1);
+    border: 1px solid #BABABA;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 24px;
+    color: #00606A;
+    border-style: double;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
+}
+
+.aside .icon {
+    float: left;
+    padding: 0px 10px 0px 0px;
+    background-image: url("https://img.icons8.com/dusk/32/000000/sorting-answers.png");
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+}
+
+.aside .navigation ul {
+    margin: 0px auto;
+    padding: 10px;
+    width: 240px;
+    background-color: #EEEEEE;
+    border: 1px solid #BABABA;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 11px;
+}
+
+.aside .navigation li {
+    color: #606060;
+    margin: 5px 0px 5px 20px;
+    padding: 0px 0px 0px 20px;
+    list-style: none;
+    background-image: url("https://img.icons8.com/dusk/16/000000/circled-right-2.png");
+    height: 16px;
+    background-repeat: no-repeat;
+}
+
+.aside .navigation .search {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 11px;
+    color: #00606A;
+    background-image: url("https://img.icons8.com/dusk/16/000000/search--v1.png");
+    background-repeat: no-repeat;
+    height: 16px;
+    padding-left: 25px;
+    padding-top: 2px;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
+}
+
+.aside .navigation .categories {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 11px;
+    color: #00606A;
+    background-image: url("https://img.icons8.com/dusk/16/000000/sorting-answers.png");
+    background-repeat: no-repeat;
+    height: 16px;
+    padding-left: 25px;
+    padding-top: 2px;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
+}
+
+.aside .navigation .recentsposts {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 11px;
+    color: #00606A;
+    background-image: url("https://img.icons8.com/dusk/16/000000/open-book--v1.png");
+    background-repeat: no-repeat;
+    height: 16px;
+    padding-left: 25px;
+    padding-top: 2px;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
+}
+
+.aside .navigation .comments {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 11px;
+    color: #00606A;
+    background-image: url("https://img.icons8.com/dusk/16/000000/comments.png");
+    background-repeat: no-repeat;
+    height: 16px;
+    padding-left: 25px;
+    padding-top: 2px;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
+}
+
+.aside .navigation .social {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 11px;
+    color: #00606A;
+    background-image: url("https://img.icons8.com/dusk/16/000000/social-network.png");
+    background-repeat: no-repeat;
+    height: 16px;
+    padding-left: 25px;
+    padding-top: 2px;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
+}
+
+.footer {
+    float: left;
+    margin: 10px 0px 10px 0px;
+    padding: 5px 0px 5px 0px;
+    height: 20px;
+    width: 280px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #DFDFDF;
+}
+
+.footer .copy .text {
+    margin: 0px auto;
+    padding: 3px 0px 0px 0px;
+    width: 260px;
+    height: 15px;
+    background-color: #EEEEEE;
+    border: 1px solid #BABABA;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 11px;
+    color: #00606A;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
+    text-align: center;
+}

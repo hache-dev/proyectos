@@ -1,0 +1,571 @@
+/*
+tHDesign Style
+-----------------------------------
+@Author : Fernando C�ceres
+@Client: Ars Interiores
+@Date: 18.06.2010
+@Description: Style Ars Interiores Web Site
+-----------------------------------
+*/
+
+BODY {
+    background: url(imagenes/bg.jpg) repeat-x #3A3A3A;
+}
+
+/*
+ ----------
+ CONTENEDOR
+ ----------
+*/
+
+#contenedor {
+    width: 786px;
+    height: 940px;
+    margin: 20px auto;
+    background: #FFFFFF;
+    border-top: solid 10px #82A000;
+    border-bottom: solid 10px #82A000;
+}
+
+/*
+ --------
+ CABECERA
+ --------
+*/
+
+#contenedor #cabecera {
+    width: 786px;
+    margin: 5px auto;
+}
+
+#contenedor #cabecera #logo {
+    width: 410px;
+    height: 87px;
+    padding: 5px 0px 0px 39px;
+    float: left;
+}
+
+
+#contenedor #cabecera #linea {
+    padding: 25px 0px 0px 85px;
+    float: left;
+}
+
+#contenedor #cabecera #datos {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 25px 39px 0px 0px;
+    color: #5E7702;
+    float: right;
+}
+
+#contenedor #cabecera #datos a:link, #contenedor #cabecera #datos a:visited{
+    text-decoration: none;
+    border-bottom: dotted 1px;
+    color: #5E7702;
+}
+
+#contenedor #cabecera #datos a:hover, #contenedor #cabecera #datos a:active{
+    border-bottom: none;
+    color: #5E7702;
+}
+/*
+ ----
+ MENU
+ ----
+*/
+
+#contenedor #menu {
+    width: 730px;
+    height: 45px;
+    margin: 0px auto;
+    margin-top: 110px;
+    background: url(imagenes/bgmenu.jpg) repeat-x center;
+}
+
+#contenedor #menu .izq {
+    width: 5px;
+    height: 45px;
+    background: url(imagenes/bgmenuizq.jpg) no-repeat left;
+    float: left;
+}
+
+#contenedor #menu #enlaces ul {
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #83A101;
+    text-align: center;
+    margin: 0px auto;
+    list-style: none;
+    padding: 14px 0px 0px 0px;
+}
+
+#contenedor #menu #enlaces ul li {
+    text-align: center;
+    display: inline;
+    margin: 30px;
+}
+
+#contenedor #menu #enlaces ul li a:link, #contenedor #menu #enlaces ul li a:visited{
+    text-decoration: none;
+    color: #83A101;
+}
+
+#contenedor #menu #enlaces ul li a:hover, #contenedor #menu #enlaces ul li a:active{
+    border-bottom: dotted 1px;
+    color: #83A101;
+}
+
+#contenedor #menu .der {
+    width: 5px;
+    height: 45px;
+    margin: -28px 0px 0px 0px;
+    background: url(imagenes/bgmenuder.jpg) no-repeat left;
+    float: right;
+}
+
+/*
+ ---------
+ SLIDESHOW
+ ---------
+*/
+
+#contenedor #slide {
+    width: 730px;
+    height: 228px;
+    margin: 0px auto;
+}
+
+/*
+ --------------
+ CONTENEDOR WEB
+ --------------
+*/
+
+#contenedorweb {
+    width: 730px;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-bottom: 490px;
+}
+
+#contenedorweb #contenido {
+    float:left;
+}
+
+#contenedorweb #contenido .arriba {
+    background: url(imagenes/bgcontenidoarriba.jpg) no-repeat bottom;
+    width: 497px;
+    height: 5px;
+}
+
+#contenedorweb #contenido .centro {
+    border-left: 1px solid #B3B3B3;
+    border-right: 1px solid #B3B3B3;
+    background: #F1F1F1;
+    width: 496px;
+    height: 450px;
+}
+
+#contenedorweb #contenido .centro .texto .titulo h3 {
+    border-top: 1px solid #94B901;
+    border-bottom: 2px solid #94B901;
+    padding: 5px 0px 5px 0px;
+    margin: 0px 0px 20px 0px;
+}
+
+#contenedorweb #contenido .centro .texto {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    padding: 10px;
+}
+
+#contenedorweb #contenido .centro .texto a:link, #contenedorweb #contenido .centro .texto a:visited{
+    text-decoration: none;
+    color: #83A101;
+}
+
+#contenedorweb #contenido .centro .texto a:hover, #contenedorweb #contenido .centro .texto a:active{
+    border-bottom: dotted 1px;
+    color: #83A101;
+}
+
+#contenedorweb #contenido .abajo {
+    background: url(imagenes/bgcontenidoabajo.jpg) no-repeat top;
+    width: 497px;
+    height: 5px;
+}
+
+/*
+ ------------------------
+ SIDEBAR: ALGUNOS MODELOS
+ ------------------------
+*/
+
+#contenedorweb #sidebar {
+    float:right;
+}
+
+#contenedorweb #sidebar #algunosmodelos .arriba {
+    background: url(imagenes/bgsidebararriba.jpg) no-repeat bottom;
+    width: 224px;
+    height: 5px;
+}
+
+#contenedorweb #sidebar #algunosmodelos .centro {
+    border-left: 1px solid #B3B3B3;
+    border-right: 1px solid #B3B3B3;
+    background: #F1F1F1;
+    width: 223px;
+}
+
+#contenedorweb #sidebar #algunosmodelos .centro .texto .titulo h3 {
+    border-top: 1px solid #94B901;
+    border-bottom: 2px solid #94B901;
+    padding: 5px 0px 5px 0px;
+    margin: 0px 0px 20px 0px;
+}
+
+#contenedorweb #sidebar #algunosmodelos .centro .texto {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    padding: 10px;
+}
+
+#contenedorweb #sidebar #algunosmodelos .centro #vermas {
+    width: 180px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    color: #83A101;
+    padding: 10px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+#contenedorweb #sidebar #algunosmodelos .centro #vermas a:link, #contenedorweb #sidebar #algunosmodelos .centro #vermas a:visited{
+    text-decoration: none;
+    color: #83A101;
+}
+
+#contenedorweb #sidebar #algunosmodelos .centro #vermas a:hover, #contenedorweb #sidebar #algunosmodelos .centro #vermas a:active{
+    border-bottom: dotted 1px;
+    color: #83A101;
+}
+
+#contenedorweb #sidebar #algunosmodelos .abajo {
+    background: url(imagenes/bgsidebarabajo.jpg) no-repeat top;
+    width: 224px;
+    height: 5px;
+    margin: 0px 0px 8px 0px;
+}
+
+/*
+ ----------------------
+ SIDEBAR: CATALOGO MENU
+ ----------------------
+*/
+
+.catalogomenu {
+    margin: 0px auto;
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #83A101;
+}
+
+.catalogomenu a:link, .catalogomenu a:visited{
+    text-decoration: none;
+    color: #83A101;
+}
+
+.catalogomenu a:hover, .catalogomenu a:active{
+    border-bottom: dotted 1px;
+    color: #83A101;
+}
+
+.catalogomenu .fondo {
+    background: #e2e2e2;
+    border-bottom: 1px solid #94B901;
+    margin: 0px 0px 6px 0px;
+    padding: 0px 0px 0px 5px;
+    height: 15px;
+}
+
+.paginacion {
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #83A101;
+	padding-top: 5px;
+}
+
+.paginacion a:link, .paginacion a:visited{
+    text-decoration: none;
+    color: #83A101;
+}
+
+.paginacion a:hover, .paginacion a:active{
+    border-bottom: dotted 1px;
+    color: #83A101;
+}
+
+
+/*
+ -------
+ OFERTAS
+ -------
+*/
+
+#contenedorweb #sidebar #ofertas {
+    float:right;
+
+}
+
+/*
+------------
+LINK OFERTAS
+------------
+*/
+
+
+.LinkOfertas a:link {
+	color: #81A100;
+	text-decoration: none;
+}
+.LinkOfertas a:visited {
+	text-decoration: none;
+	color: #81A100;
+}
+.LinkOfertas a:hover {
+	border-bottom:1px dotted #81A100;
+}
+.LinkOfertas a:active {
+	text-decoration: none;
+	color: #81A100;
+}
+
+
+/*
+ -------------------
+ ATENCION AL CLIENTE
+ -------------------
+*/
+#contenedorweb #sidebar #atencionalcliente {
+    float: right;
+    clear: both;
+    margin: 0px 0px 0px 0px;
+}
+
+#contenedorweb #sidebar #atencionalcliente #arriba {
+    background: url(imagenes/bgsidebararriba.jpg) no-repeat bottom;
+    width: 224px;
+    height: 5px;
+}
+
+#contenedorweb #sidebar #atencionalcliente #centro {
+    border-left: 1px solid #B3B3B3;
+    border-right: 1px solid #B3B3B3;
+    background: #F1F1F1;
+    width: 223px;
+}
+
+#contenedorweb #sidebar #atencionalcliente #centro #texto #titulo h3 {
+    border-top: 1px solid #94B901;
+    border-bottom: 2px solid #94B901;
+    padding: 5px 0px 5px 0px;
+    margin: 0px 0px 5px 0px;
+}
+
+#contenedorweb #sidebar #atencionalcliente #centro #texto {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px;
+    padding: 10px;
+}
+
+#contenedorweb #sidebar #atencionalcliente #centro #vermas {
+    width: 180px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    color: #83A101;
+    padding: 10px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+#contenedorweb #sidebar #atencionalcliente #centro #vermas a:link, #contenedorweb #sidebar #atencionalcliente #centro #vermas a:visited{
+    text-decoration: none;
+    color: #83A101;
+}
+
+#contenedorweb #sidebar #atencionalcliente #centro #vermas a:hover, #contenedorweb #sidebar #atencionalcliente #centro #vermas a:active{
+    border-bottom: dotted 1px;
+    color: #83A101;
+}
+
+#contenedorweb #sidebar #atencionalcliente #abajo {
+    background: url(imagenes/bgsidebarabajo.jpg) no-repeat top;
+    width: 224px;
+    height: 5px;
+    margin: 0px 0px 10px 0px;
+}
+
+/*
+ ------
+ FOOTER
+ ------
+*/
+#footer {
+    width: 730px;
+    height: 45px;
+}
+
+#contenedor #footer {
+    margin: 0px auto;
+    background: url(imagenes/bgfooter.jpg) repeat-x center;
+}
+
+#contenedor #footer .izq {
+    width: 5px;
+    height: 45px;
+    background: url(imagenes/bgfooterizq.jpg) no-repeat left;
+    float: left;
+}
+
+#contenedor #footer #textofooter {
+    margin: 0px auto;
+}
+
+#contenedor #footer #textofooter #url {
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    color: #83A101;
+    float: left;
+    padding: 15px 0px 0px 10px;
+}
+
+#contenedor #footer #textofooter #url a:link, #contenedor #footer #textofooter #url a:visited{
+    text-decoration: none;
+    color: #83A101;
+}
+
+#contenedor #footer #textofooter #url a:hover, #contenedor #footer #textofooter #url a:active{
+    border-bottom: dotted 1px;
+    color: #83A101;
+}
+
+#contenedor #footer #textofooter #menufooter ul {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    color: gray;
+    margin: 0px auto;
+    text-align: right;
+    list-style: none;
+    padding: 15px 5px 0px 0px;
+}
+
+#contenedor #footer #textofooter #menufooter ul li {
+    display: inline;
+    margin: 10px;
+}
+
+#contenedor #footer #textofooter #menufooter ul li a:link, #contenedor #footer #textofooter #menufooter ul li a:visited{
+    text-decoration: none;
+    color: gray;
+}
+
+#contenedor #footer #textofooter #menufooter ul li a:hover, #contenedor #footer #textofooter #menufooter ul li a:active{
+    border-bottom: dotted 1px;
+    color: gray;
+}
+
+
+#contenedor #footer .der {
+    width: 5px;
+    height: 45px;
+    background: url(imagenes/bgfooterder.jpg) no-repeat left;
+    float: right;
+    margin: -27px 0px 0px 0px;
+}
+
+/*
+----------------------
+FORMULARIO DE CONTACTO
+----------------------
+*/
+
+.FormCampos {
+	border: 2px solid #83A101;
+	height: 20px;
+	width: 250px;
+	background: #F1F1F1;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 13px;
+	color:#666;
+}
+
+.FormArea {
+	border: 2px solid #83A101;
+	height: 200px;
+	width: 250px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 13px;
+	color: #666;
+	background: #F1F1F1;
+}
+
+.FormBoton {
+	border: 2px solid #83A101;
+	background: #F1F1F1;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 13px;
+	color: #666;
+	
+}
+
+/*
+---------
+UBICACION
+---------
+*/
+
+.ubicaciontexto {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    color: #83A101;
+    padding: 10px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.ubicaciontexto a:link, .ubicaciontexto a:visited{
+    text-decoration: none;
+    color: #83A101;
+}
+
+.ubicaciontexto a:hover, .ubicaciontexto a:active{
+    border-bottom: dotted 1px;
+    color: #83A101;
+}
+
+/*
+----------
+VALIDATION
+----------
+*/
+
+#validation {
+	margin: 0px auto;
+	text-align: center;
+	padding: 2px 0px 0px 0px;
+}
+
+#validation a {
+    text-transform: none;
+    color: transparent;
+}

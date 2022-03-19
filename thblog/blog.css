@@ -1,0 +1,394 @@
+body {
+    background-color:#233139;
+    margin-bottom: 595px;
+    /**margin-bottom: 5px;*/
+}
+
+#contenedor {
+    width:938px;
+    margin:0px auto;
+}
+
+#contenedor #menutop {
+    height:35px;
+    background-image: url(imagenes/menutop.jpg);
+    background-repeat:no-repeat;
+    background-color: #3D5965;
+}
+
+#contenedor #header {
+    height:206px;
+    background-image: url(imagenes/header.jpg);
+    background-repeat: no-repeat;
+    background-color: #FFF;
+    margin-bottom:-1px;
+    margin-top:-1px;
+}
+
+#contenedor #menudown {
+    height:46px;
+    background-image: url(imagenes/menudown.jpg);
+    background-repeat: no-repeat;
+    background-color: #3D5965;
+}
+
+#contenedor #menudown #populares {
+    font-family: Verdana,Geneva, sans-serif;
+    font-size: 11px;
+    color: #8EC4DF;
+    width: 750px;
+    height: 46px;
+    margin: 0px auto;
+    clear:both;
+}
+
+#contenedor #menudown #populares #ultimos {
+    float: left;
+    padding-left: 42px;
+    padding-top: 15px;
+    clear:both;
+}
+
+#contenedor #menudown #populares #articulos {
+    float: left;
+    padding-left: 55px;
+    padding-top: 15px;
+}
+
+#contenedor #menudown #populares #comentados {
+    float: left;
+    padding-left: 72px;
+    padding-top: 15px;
+}
+
+#contenedor #contenedorweb {
+    width:938px;
+    background-image: url(imagenes/contenidowebtop.jpg);
+    background-repeat: no-repeat;
+    margin:4px 0px 0px 0px;
+    padding:4px 0px 0px 0px;
+}
+
+#contenidoweb {
+    float:left;
+    width:642px;
+    background-image: url(imagenes/contenidoweb.jpg);
+    background-repeat: repeat-y;
+    padding:5px 0px 0px 0px;
+}
+
+#contenidowebdown {
+    width:642px;
+    height:6px;
+    background-image: url(imagenes/contenidowebdown.jpg);
+    background-repeat: no-repeat;
+}
+
+#sidebar {
+    float: right;
+    width: 292px;
+    background-image: url(imagenes/sidebar.jpg);
+    background-repeat: repeat-y;
+}
+
+#sidebar #busqueda {
+    background-image: url(imagenes/bgsidebartitles.jpg);
+    background-repeat: no-repeat;
+    padding-left:20px;
+    margin-left:1px;
+    height:15px;
+    width:266px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:9px;
+    color: #8EC4DF;
+}
+
+#sidebar #form {
+    margin: 0px auto;
+    padding:5px 0px 0px 25px;
+}
+
+#sidebar #form #search {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:9px;
+    color: #8EC4DF;
+    width: 188px;
+    height: 19px;
+    background: url(imagenes/search.jpg) no-repeat center;
+    border:0px;
+    padding-left:5px;
+}
+
+#sidebar #patrocinadores {
+    background-image: url(imagenes/bgsidebartitles.jpg);
+    background-repeat: no-repeat;
+    padding-left:20px;
+    margin-left:1px;
+    height:15px;
+    width:266px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:9px;
+    color: #8EC4DF;
+    margin-top: 30px;
+}
+
+#sidebar #logos {
+    margin: 0px auto;
+    padding: 10px 0px 0px 10px;
+    border: 0px;
+}
+
+#sidebar #categorias {
+    background-image: url(imagenes/bgsidebartitles.jpg);
+    background-repeat: no-repeat;
+    padding-left:20px;
+    margin-left:1px;
+    height:15px;
+    width:266px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:9px;
+    color: #8EC4DF;
+    margin-top:30px;
+}
+
+#sidebar .menu ul {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    color: #8EC4DF;
+    margin: 5px 0px 0px 0px;
+    list-style-type: none;
+    /**margin: 5px 0px 0px 12px; /* fix ie */
+    /**padding: 0px 0px 0px 20px; /* fix ie */
+    /**list-style-image: url(imagenes/dot.jpg); /* fix ie */
+}
+
+#sidebar .menu ul li {
+    list-style-image: url(imagenes/dot.jpg);
+    padding: 3px 0px 0px 0px;
+    /**padding: 0px 0px 0px 0px; /* fix ie */
+}
+
+#sidebar .menu ul li a:link, #sidebar .menu ul li a:visited{
+    text-decoration: none;
+    color: #8EC4DF;
+}
+
+#sidebar .menu ul li a:hover, #sidebar .menu ul li a:active{
+    text-decoration: underline;
+    color: #8EC4DF;
+}
+
+#sidebar #tags {
+    background-image: url(imagenes/bgsidebartitles.jpg);
+    background-repeat: no-repeat;
+    padding-left:20px;
+    margin-left:1px;
+    height:15px;
+    width:266px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:9px;
+    color: #8EC4DF;
+    margin-top: 30px;
+}
+
+#sidebar #rss {
+    background-image: url(imagenes/bgsidebartitles.jpg);
+    background-repeat: no-repeat;
+    padding-left:20px;
+    margin-left:1px;
+    height:15px;
+    width:266px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size:9px;
+    color: #8EC4DF;
+    margin-top: 30px;
+}
+
+#sidebar #rssicos {
+    margin: 10px 0px 0px 30px;
+}
+
+#sidebardown {
+    width:292px;
+    height:6px;
+    background-image: url(imagenes/sidebardown.jpg);
+    background-repeat: no-repeat;
+}
+
+#footer {
+    float:right;
+    width:292px;
+    height:67px;
+    background-image: url(imagenes/bgfooter.jpg);
+    background-repeat: no-repeat;
+    margin-top:4px;
+}
+
+#footer #logo {
+    margin: 20px 0px 0px 0px;
+    text-align:center;
+}
+
+#footer #copyleft {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    color: #8EC4DF;
+    text-align:center;
+}
+
+#footer #copyleft a:link, #footer #copyleft a:visited{
+    text-decoration: none;
+    color: #8EC4DF;
+    font-weight: bold;
+}
+
+#footer #copyleft a:hover, #footer #copyleft a:active{
+    text-decoration: none;
+    color: #8EC4DF;
+    font-weight: bold;
+}
+
+.bgtitulo {
+    background-image: url(imagenes/bgarticulotitulo.jpg);
+    background-repeat: no-repeat;
+    width:627px;
+    height:57px;
+    margin: 0 auto;
+    margin-bottom:4px;
+}
+
+.titulo h4 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size:13px;
+  color:#8EC4DF;
+  margin:0px 0px 0px 0px;
+  padding-left:6px;
+  padding-top:8px;
+}
+
+.titulo a:link, .titulo a:visited {
+    color: #8EC4DF;
+    text-decoration:none;
+}
+
+.titulo a:hover, .titulo a:active {
+    text-decoration:none;
+}
+
+.metatags {
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:10px;
+    color:#8EC4DF;
+    padding-left:6px;
+}
+
+.metatags a:link, .metatags a:visited {
+    color: #8EC4DF;
+    text-decoration:none;
+}
+
+.metatags a:hover, .metatags a:active {
+    text-decoration: underline;
+}
+
+.bgarticulotop {
+    background-image: url(imagenes/bgarticulotop.jpg);
+    background-repeat: no-repeat;
+    width:627px;
+    height:12px;
+    margin: 0 auto;
+}
+
+.bgarticulo {
+    background-image: url(imagenes/bgarticulo.jpg);
+    background-repeat: repeat-y;
+    width:627px;
+    margin: 0 auto;
+    /*_margin-top: -5px;  /* fix ie */
+}
+
+.bgarticulodown {
+    background-image: url(imagenes/bgarticulodown.jpg);
+    background-repeat:no-repeat;
+    width:627px;
+    height:12px;
+    margin: 0 auto;
+    margin-bottom:5px;
+}
+
+.articulo {
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:10px;
+    color:#8EC4DF;
+    padding:0px 15px 2px 15px;
+}
+
+.articulo .foto {
+    float:right;
+    text-align:center;
+    padding:1px;
+}
+
+.leermas {
+    background-image: url(imagenes/bgleermas.jpg);
+    background-repeat: no-repeat;
+    width:161px;
+    height:21px;
+    margin: 5px 0px 0px 450px;
+    padding: 0px 0px 5px 0px;
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:10px;
+    color:#8EC4DF;
+}
+.leermas .comentar {
+    float:right;
+    text-align:right;
+    padding: 3px 15px 0px 0px;
+}
+
+.leermas .leermasarticulo {
+    float:left;
+    text-align:left;
+    padding: 3px 0px 0px 8px;
+}
+
+.leermas .leermasarticulo a:link, .leermas .leermasarticulo a:visited {
+    color: #8EC4DF;
+    text-decoration:none;
+}
+
+.leermas .leermasarticulo a:hover, .leermas .leermasarticulo a:active {
+    text-decoration: underline;
+}
+
+.leermas .comentar a:link, .leermas .comentar a:visited {
+    color: #8EC4DF;
+    text-decoration:none;
+}
+
+.leermas .comentar a:hover, .leermas .comentar a:active {
+    text-decoration: underline;
+}
+
+.paginacion {
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:12px;
+    color:#8EC4DF;
+    text-align:center;
+    background-image: url(imagenes/bgpaginacion.jpg);
+    background-repeat: no-repeat;
+    width: 627px;
+    height: 32px;
+    margin: 0px auto;
+    padding: 8px 0px 0px 0px;
+}
+
+.paginacion a:link, .paginacion a:visited{
+    color:#8EC4DF;
+    text-decoration:none;
+}
+
+.paginacion  a:hover, .paginacion a:active{
+    text-decoration:underline;
+}
+

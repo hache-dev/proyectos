@@ -1,0 +1,381 @@
+/*
+
+tHDesign Style
+-----------------------
+
+@Author : Fernando Cáceres
+@Client: Central De PC
+@Date: 22.01.10
+@Description: Style Central de PC Web Site
+
+-----------------------
+
+/*
+
+/*
+----
+BODY
+----
+*/
+
+BODY {
+	background-color:#E8E8E8;
+	margin-top:0px;
+}
+
+/*
+---------
+CONTAINER
+---------
+*/
+
+.Container
+{
+	width:766px;
+	height:100%;
+	margin: 0 auto;
+}
+
+/*
+------
+HEADER
+------
+*/
+
+.Header {
+	width:766px;
+	height:135px;
+	background-image:url(img/header.jpg);
+	background-repeat: no-repeat;
+	margin: 0 auto;
+}
+
+/*
+----------
+NAVIGATION
+----------
+*/
+
+.Navigation {
+	width:766px;
+	height:41px;
+	background-image:url(img/navigation.jpg);
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+	color:#FFF;
+}
+
+.Navigation a:link {
+	color: #FFF;
+	text-decoration: none;
+}
+.Navigation a:visited {
+	text-decoration: none;
+	color: #FFF;
+}
+.Navigation a:hover {
+	border-bottom:1px dotted #FFF;
+}
+.Navigation a:active {
+	text-decoration: none;
+	color: #FFF;
+}
+
+/*
+-------
+CONTENT
+-------
+*/
+
+.Content {
+	width:766px;
+	height:100%;
+	background-image:url(img/content.jpg);
+	background-repeat:repeat-y;
+	margin:0 auto;
+}
+
+/*
+-----------
+CONTENT WEB
+-----------
+*/
+
+.ContentWeb {
+	width:597px;
+	height:100%;
+	margin:0 auto;
+	padding-top:10px;
+}
+
+.WebHeader {
+	width:579px;
+	height:18px;
+	background-image:url(img/headerDW.jpg);
+	background-repeat:no-repeat;
+	margin: 0 auto;
+}
+
+.WebContent {
+	width:579px;
+	height:100%;
+	background-image:url(img/contentDW.jpg);
+	background-repeat:repeat-y;
+	margin: 0 auto;
+	text-align:center;
+}
+
+.WebBar {
+	width:552px;
+	height:28px;
+	background-image:url(img/barDW.jpg);
+	background-repeat:no-repeat;
+	margin:0 auto;
+	padding-bottom:10px;
+}
+
+.WebBarText {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	color:#0F3355;
+	padding-top:6px;
+	padding-left: 28px;
+	text-align:left;
+}
+
+#WebText {
+	width:540px;
+	margin: 0 auto;
+	text-align:justify;
+	font-family:Arial, Helvetica, sans-serif;
+	/*font-size:10px;*/
+	/*color:#969696;*/
+	color:#999999;
+}
+
+#WebText a:link {
+	color: #919191;
+	text-decoration: none;
+}
+#WebText a:visited {
+	text-decoration: none;
+}
+#WebText a:hover {
+	/*text-decoration: underline;*/
+	border-bottom:1px dotted #919191;
+	/*color: #919191;*/
+	/*font-weight:bold;*/
+}
+#WebText a:active {
+	text-decoration: none;
+	color: #919191;
+}
+
+.FontSize {
+	width:50px;
+	float:right;
+}
+
+.WebFooter {
+	width:579px;
+	height:15px;
+	background-image:url(img/footerDW.jpg);
+	background-repeat:no-repeat;
+	margin: 0 auto;
+	padding-bottom:10px;
+}
+
+/*
+----------------------------------------------
+CONTACTO SIDEBAR & FORM FORMULARIO DE CONTACTO
+----------------------------------------------
+*/
+
+.SideForm {
+	width:185px;
+	height:250px;
+	float:left;
+}
+
+.SideHeader {
+	width:185px;
+	height:13px;
+	background-image:url(img/contactoSH.jpg);
+	background-repeat:repeat;
+}
+
+.SideContent {
+	width:185px;
+	height:255px;
+	background-image:url(img/contactoSC.jpg);
+	background-repeat: repeat;
+}
+
+.SideBar {
+	width:150px;
+	height:28px;
+	background-image:url(img/contactoSB.jpg);
+	background-repeat:no-repeat;
+	margin: 0 auto;
+}
+
+.SideBarText {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	color:#0F3355;
+	padding-top:6px;
+	padding-left:28px;
+	text-align:left;
+}
+.SideText {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#0F3355;
+	padding-left:20px;
+	padding-top:5px;
+	margin:0 auto;
+}
+
+.SideFooter	{
+	width:185px;
+	height:13px;
+	background-image:url(img/contactoSF.jpg);
+	background-repeat: no-repeat;
+}
+
+
+
+.Form {
+	width:345px;
+	height:40px;
+	background-image:url(img/contacto.jpg);
+	background-repeat:no-repeat;
+	float:right;
+	margin-top:4px;
+}
+
+.FormTitle {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#0F3355;
+	padding-top:17px;
+	padding-left:35px;
+	margin:0 auto;
+}
+
+.FormTitleSoporte {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#0F3355;
+	margin-top: 10px;
+	padding-top:5px;
+	padding-left:35px;
+	font-weight:bold;
+	margin:0 auto;
+}
+
+
+.FormTable {
+	padding-top:15px;
+}
+
+.TableTexto {
+	color:#8E8E8E;
+	/*font-weight:bold;*/
+}
+
+.Campos {
+	width:238px;
+	height:20px;
+	border: 0px none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#0F3355;
+	/*text-transform:uppercase;*/
+	background-image:url(img/inp.jpg);
+	background-repeat:no-repeat;
+	padding-left:5px;
+
+}
+
+.AreaTexto {
+	width:238px;
+	height:191px;
+	border: 0px none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#0F3355;
+	text-transform:uppercase;
+	background-image:url(img/inp2.jpg);
+	background-repeat:no-repeat;
+	padding-left:5px;
+	padding-top:5px;
+}
+
+.Enviar {
+	background-color:#FFF;
+	font-family:Arial, Helvetica, sans-serif;
+	border: none;
+	font-size:14px;
+	color:#8E8E8E;
+	font-weight:bold;
+	padding-top:5px;
+}
+
+/*
+------
+FOOTER
+------
+*/
+
+.Footer {
+	width:766px;
+	height:56px;
+	background-image:url(img/footer.jpg);
+	background-repeat:no-repeat;
+	margin: 0 auto;
+}
+
+.Validation {
+	margin: 0 auto;
+	text-align:center;
+}
+
+
+/*
+----
+qTIP
+----
+*/
+
+div#qTip {
+ padding: 3px;
+ border: 1px solid #666;
+ border-right-width: 2px;
+ border-bottom-width: 2px;
+ display: none;
+ background: #999;
+ color: #FFF;
+ font: bold 9px Verdana, Arial, sans-serif;
+ text-align: left;
+ position: absolute;
+ z-index: 1000;
+}
+
+/*
+--------
+FontSize
+--------
+*/
+
+/* Fuente pequeña */  
+.nivel1 {font-size: 13px;}  
+  
+ /* Fuente normal */  
+.nivel2 {font-size: 15px;}
+

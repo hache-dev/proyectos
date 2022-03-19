@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CRSERVERS.COM.AR - Alojamiento Web Hosting en Argentina</title> 
+<meta name="author" content="CRSERVERS S.R.L"/> 
+<meta content=" Alojamiento de paginas web, Dominios, Audio Streaming, Irchosting, Marketing Online" name="description"/>
+<link rel="icon" href="img/favicon.gif" type="image/gif" />
+<link href="estilo.css" rel="stylesheet" type="text/css" />
+<link type="text/css" href="js/css/osx.css" rel="stylesheet" media="screen" />
+<script type="text/javascript" src="js/validateForm.js" type="text/JavaScript"></script> 
+<script type="text/javascript" src="js/jquery.js"></script> 
+<script type="text/javascript" src="js/jquery.simplemodal.js"></script> 
+<script type="text/javascript" src="js/osx.js"></script>
+<!--[if IE 6]>
+<script src="js/pngfix.js"></script>
+<script>
+	DD_belatedPNG.fix('#cont, img');
+</script>
+<![endif]-->
+</head>
+
+<body>
+   <div id="cont">
+        <div id="logo">
+            <img src="img/logo.png" alt="CRSERVERS.com.ar" title="CRSERVERS.com.ar" />
+        </div>
+        <div id="boton">
+            <a href="#" class="osx">
+                <img src="img/boton.png" alt="Contactanos" title="Contactanos" border="0" />
+            </a>
+        </div>
+    </div>
+    <div id="osx-modal-content">
+	<div id="osx-modal-title">
+            Formulario:
+        </div>
+	<div class="close">
+            <a href="#" class="simplemodal-close">
+                x
+            </a>
+        </div>
+	<div id="osx-modal-data">
+            <p>
+                <form id="form" name="form" method="post" action="contacto.php" onsubmit="return validate_form();" >
+                    <table border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td class="inputt" >
+                                Nombre:
+                            </td>
+                            <td>
+                                <input type="inputt" name="Nombre" class="inputr" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inputt">
+                                Apellido:
+                            </td>
+                            <td>
+                                <input type="text" name="Apellido" class="inputr" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inputt">
+                                Email:
+                            </td>
+                            <td>
+                                <input type="text" name="Email" class="inputr" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inputt">
+                                Cliente:
+                            </td>
+                            <td>
+                                <input type="text" name="Cliente" id="inputo" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="mensajet">
+                                Mensaje:
+                            </td>
+                            <td>
+                                <textarea name="Mensaje" id="mensajec" cols="45" rows="5"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td align="right">
+                                <input type="submit" name="Submit" value="ENVIAR" id="enviar" />
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            <!--<p>
+                <button class="simplemodal-close">
+                    Cerrar
+                </button>
+                </p>-->
+	</div>
+    </div>
+</body>
+</html>

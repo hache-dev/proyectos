@@ -1,0 +1,146 @@
+BODY {
+    margin: 168px 0px 0px 0px;
+    font-family: 'Open Sans', sans-serif;
+    background: url(imagenes/inicio_fdo.jpg) repeat-x #EFEFE3;
+}
+
+
+h1, h2 {
+    font-family: 'Codystar', cursive;
+    font-size: 30px;
+    text-shadow: 2px 2px 2px #824e9a;
+    color: #EBEBEB;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#contenedor {
+    z-index: 1;
+    margin: 0px auto;
+    width: 1000px;
+}
+
+#contenedor #logo {
+    float: left;
+    margin-top: -35px;
+    width: 435px;
+    height: 326;
+}
+
+#contenedor #contenido {
+    z-index: 2;
+    float: left;
+    margin: -80px 0px 0px 0px;
+    width: 542px;
+    height: 395px;
+    background: url(imagenes/contenido_fdo.png) no-repeat center;
+}
+
+#contenedor #contenido #slide {
+    z-index: 3;
+    position: absolute;
+    margin: 22px 0px 0px 21px;
+    width: 500px;
+    height: 305px;
+    background: #000000;
+}
+
+#contenedor #contenido #menu {
+    z-index: 4;
+    position: absolute;
+    margin: 280px 0px 0px 295px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px #000000;
+    width: 279px;
+    height: 43px;
+    background: url(imagenes/menu_fdo.png) no-repeat center;
+}
+
+#contenedor #contenido #menu .texto{
+    padding: 8px 0px 0px 25px;
+}
+
+#barras_contenido {
+    margin: 0px auto;
+    width: 840px;
+}
+
+#barras_contenido #barra_tradicional {
+    float: left;
+    width: 210px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#barras_contenido #barra_premium {
+    float: left;
+    width: 210px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#barras_contenido #barra_teens {
+    float: left;
+    width: 210px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#barras_contenido #adicionales {
+    float: left;
+    width: 210px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#barras_contenido .texto_barras {
+    margin: 0px auto;
+    width: 180px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+#contacto_contenido {
+    margin: 0px auto;
+    width: 480px;
+}
+
+#contacto_contenido #contacto {
+    margin: 0px auto;
+    width: 480px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#contacto_contenido .texto_contenido {
+    margin: 0px auto;
+    width: 180px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+#destacar {
+    overflow: hidden;
+    margin: 0px auto;
+    width: 840px;
+    font-size: 12px;
+}
+
+#sound {
+    clear: both;
+    margin: 0px auto;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+}

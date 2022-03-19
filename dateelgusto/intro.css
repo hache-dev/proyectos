@@ -1,0 +1,30 @@
+HTML, BODY {
+background: url(imagenes/intro_fdo.jpg) repeat-x #EFEFE3;
+   scrollbar-face-color:#343434;
+   scrollbar-arrow-color:green;
+   scrollbar-track-color:#292929;
+   scrollbar-shadow-color:rgb(41,41,41);
+   scrollbar-highlight-color:rgb(41,41,41);
+   scrollbar-3dlight-color:#292929;
+   scrollbar-darkshadow-Color:#292929;
+}
+
+
+#intro {
+    margin: 0px auto;
+    width: 664px;
+    height: 745px;
+    background: url(imagenes/intro_img.png) center no-repeat;
+}
+
+#intro #entrar {
+    padding: 386px 0px 0px 438px;
+    width: 164px;
+    height: 85px;
+}
+
+#copy h1 {
+    font-size: 15px;
+    color: #EFEFE3;
+    text-align: center;
+}

@@ -1,0 +1,101 @@
+* { margin: 0; padding: 0; border: 0; }
+
+/*
+CSS TOOLTIP
+*/
+
+.cs-popup{
+    margin: 0px 0px 0px 0px;
+    float: left;
+    padding: 0;
+    /*width: 100px;*/
+    position: relative;
+}
+ 
+div.cs-popup em {
+    background: url(img/cs.png) no-repeat;
+    width: 100px;
+    height: 49px;
+    position: absolute;
+    bottom: -70px;
+    left: -20px;
+    text-align: center;
+    text-indent: -9999px;
+    z-index: 2;
+    display: none;
+}
+
+/*
+CSS TOOLTIP
+*/
+
+.css-popup{
+    margin: 0px 0px 0px 0px;
+    float: left;
+    padding: 0;
+    /*width: 150px;*/
+    position: relative;
+}
+
+div.css-popup em {
+    background: url(img/css.png) no-repeat;
+    width: 100px;
+    height: 49px;
+    position: absolute;
+    bottom: -70px;
+    left: -20px;
+    text-align: center;
+    text-indent: -9999px;
+    z-index: 2;
+    display: none;
+}
+
+/*
+TS TOOLTIP
+*/
+
+.ts-popup{
+    margin: 0px 0px 0px 0px;
+    float: left;
+    padding: 0;
+    /*width: 100px;*/
+    position: relative;
+}
+
+div.ts-popup em {
+    background: url(img/ts.png) no-repeat;
+    width: 100px;
+    height: 49px;
+    position: absolute;
+    bottom: -70px;
+    left: -20px;
+    text-align: center;
+    text-indent: -9999px;
+    z-index: 2;
+    display: none;
+}
+
+/*
+LINUX TOOLTIP
+*/
+
+.linux-popup{
+    margin: 0px 0px 0px 0px;
+    float: left;
+    padding: 0;
+    /*width: 100px;*/
+    position: relative;
+}
+
+div.linux-popup em {
+    background: url(img/linux.png) no-repeat;
+    width: 100px;
+    height: 49px;
+    position: absolute;
+    bottom: -70px;
+    left: -20px;
+    text-align: center;
+    text-indent: -9999px;
+    z-index: 2;
+    display: none;
+}

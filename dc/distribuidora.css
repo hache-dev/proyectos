@@ -1,0 +1,613 @@
+/*
+----------------------------------------------------
+@Autores : Fernando C�ceres & Federico Alecci
+@Cliente: Ars Interiores
+@Fecha: 04.06.2012
+@Descripcion: Estilo web distribuidoracastagnera.com
+----------------------------------------------------
+*/
+
+html, BODY {
+    margin: 0px auto;
+    height: 100%;
+    background: url(imagenes/bg.jpg) no-repeat center #469D1A;
+    font-family: "Open Sans", sans-serif;
+}
+
+/*
+ ---------
+ CABECERA
+ ---------
+*/
+
+#cabecera {
+    margin: 0px auto;
+    height: 65px;
+    background: url(imagenes/fdo_cabecera.png) repeat-x;
+}
+
+#cabecera #cont_cabecera {
+    margin: 0px auto;
+    width: 940px;
+}
+
+#cabecera #cont_cabecera .logo {
+    float: left;
+    margin: 0px 120px 0px 0px;
+    height: 114px;
+}
+
+#cabecera #cont_cabecera #menu {
+    float: left;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #909090;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #FFFFFF;
+}
+
+#cabecera #cont_cabecera #menu #enlaces li {
+    float: left;
+    margin: 2px;
+    display: inline;
+}
+
+#cabecera #cont_cabecera #menu #enlaces li a:link, #cabecera #cont_cabecera #menu #enlaces li a:visited {
+    text-decoration: none;
+    color: #909090;
+}
+
+#cabecera #cont_cabecera #menu #enlaces li a:hover, #cabecera #cont_cabecera #menu #enlaces li a:active {
+    text-decoration: underline;
+    color: #909090;
+}
+
+/*
+ ----------
+ CONTENEDOR
+ ----------
+*/
+
+#contenedor {
+    margin: 0px auto;
+    width: 940px;
+    min-height:100%;
+    height: auto!important;
+    height:100%;
+}
+
+/*
+ -------
+ MARCAS
+ -------
+*/
+
+#contenedor #marcas_cont {
+    clear: both;
+    overflow: hidden;
+    margin: 20px 0px 0px 0px;
+    width: 940px;
+}
+
+#contenedor #marcas_izq {
+    float: left;
+    margin: 53px 0px 15px 0px;
+    height: 77px;
+    width: 27px;
+    background: url(imagenes/marcas_izq.jpg) no-repeat;
+}
+
+#contenedor #marcas_cen {
+    position: relative;
+    float: left;
+    margin: 53px 0px 15px 0px;
+    height: 77px;
+    width: 886px;
+    background: url(imagenes/marcas_cen.jpg) repeat-x;
+}
+
+#contenedor #marcas_cen .marca {
+    margin: 0px 0px 0px 120px;
+}
+#contenedor #marcas_cen .marca a {
+    margin: 10px 20px 0px 0px;
+    float: left;
+    display: block; 
+    position: relative;
+}	
+#contenedor #marcas_cen .marca a .rollover1 {
+    display: block; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 80px; 
+    height: 56px; 
+    background: url(imagenes/marcas/gatogarabatoorig.png);
+}
+
+#contenedor #marcas_cen .marca a {
+    margin: 8px 30px 0px 0px;
+    display: block; 
+    position: relative;
+}	
+#contenedor #marcas_cen .marca a .rollover2 {
+    display: block; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 146px; 
+    height: 65px; 
+    background: url(imagenes/marcas/rodarorig.png);
+}
+
+#contenedor #marcas_cen .marca a {
+    margin: 8px 30px 0px 0px;
+    display: block; 
+    position: relative;
+}	
+#contenedor #marcas_cen .marca a .rollover3 {
+    display: block; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 66px; 
+    height: 64px; 
+    background: url(imagenes/marcas/yuyuorig.png);
+}
+
+#contenedor #marcas_cen .marca a {
+    margin: 8px 30px 0px 0px;
+    display: block; 
+    position: relative;
+}	
+#contenedor #marcas_cen .marca a .rollover4 {
+    display: block; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 134px; 
+    height: 58px; 
+    background: url(imagenes/marcas/megapriceorig.png);
+}
+
+#contenedor #marcas_cen .marca a {
+    margin: 8px 30px 0px 0px;
+    display: block; 
+    position: relative;
+}	
+#contenedor #marcas_cen .marca a .rollover5 {
+    display: block; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 86px; 
+    height: 58px; 
+    background: url(imagenes/marcas/lunaplastorig.png);
+}
+
+#contenedor #marcas_der {
+    float: left;
+    margin: 53px 0px 15px 0px;
+    height: 77px;
+    width: 27px;
+    background: url(imagenes/marcas_der.jpg) no-repeat;
+}
+
+/*
+ ------
+ BANNER
+ ------
+*/
+
+#contenedor #banner {
+    margin: 0px 0px 15px 0px;
+    height: 253px;
+    width: 940px;
+}
+/*
+ ---------
+ CONTENIDO
+ ---------
+*/
+
+#contenido {
+    margin: 0px auto;
+    padding: 0px 0px 20px 0px;
+    width: 940px;
+}
+
+#contenido #contenido_arr {
+    margin: 0px auto;
+    height: 22px;
+    width: 940px;
+    background: url(imagenes/contenido_arr.jpg) center no-repeat;
+}
+
+#contenido #contenido_cen {
+    margin: 0px auto;
+    width: 940px;
+    background: url(imagenes/contenido_cen.jpg) center repeat-y;
+}
+
+#contenido #contenido_cen #contenido_web {
+    overflow: hidden;
+    margin: 0px auto;
+    width: 905px;
+}
+
+/*
+  -----------------
+  CONTENIDO WEB IZQ
+  -----------------
+*/
+
+#contenido #contenido_cen #contenido_web #contenido_web_izq {
+    float: left;
+    width: 600px;
+}
+
+#contenido #contenido_cen #contenido_web #contenido_web_izq .titulo h3{
+    margin: 0px auto;
+    padding: 3px 0px 0px 30px;
+    height: 25px;
+    width: 570px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #909090;
+    text-shadow: 2px 2px 2px #FFFFFF;
+    background: url(imagenes/home_ico.png) #e2ecf1 no-repeat left;
+    border-right: solid 2px #5c9bbb;
+}
+
+#contenido #contenido_cen #contenido_web #contenido_web_izq .texto {
+    margin: 0px auto;
+    width: 600px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    color: #B1B1B1;
+    text-shadow: 2px 2px 2px #FFFFFF;
+}
+
+/*
+ -------------------
+ CONTENIDO: CATALOGO
+ -------------------
+*/
+
+#contenido #contenido_cen #contenido_web #contenido_web_izq .titulo_catalogo h3{
+    margin: 0px auto;
+    padding: 4px 0px 0px 35px;
+    height: 25px;
+    width: 570px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #909090;
+    text-shadow: 2px 2px 2px #FFFFFF;
+    background: url(imagenes/buy_ico.png) #e2ecf1 no-repeat left;
+    border-right: solid 2px #5c9bbb;
+}
+
+#contenido #contenido_cen #contenido_web #contenido_web_izq .cont_catalogo {
+    margin: 0px auto;
+    padding: 10px 0px 0px 12px;
+    width: 575px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    color: #B1B1B1;
+    text-shadow: 2px 2px 2px #FFFFFF;
+}
+
+#contenido #contenido_cen #contenido_web #contenido_web_izq .cont_catalogo_thumb {
+    float: left;
+    margin: 0px 5px 12px 0px;
+    padding: 5px;
+    width: 100px;
+    background: #e2ecf1;
+    border-bottom: solid 2px #5c9bbb;
+}
+
+#contenido #contenido_cen #contenido_web #contenido_web_izq .cont_catalogo_thumb .img {
+    margin: 0px auto;
+    height: 80px;
+    width: 80px;
+    border: solid 2px #5c9bbb;
+}
+
+#contenido #contenido_cen #contenido_web #contenido_web_izq .cont_catalogo_thumb .info {
+    margin: 0px auto;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    color: #8a8a8a;
+    text-shadow: 2px 2px 2px #FFFFFF;
+    text-align: center;
+}
+
+#contenido #contenido_cen #contenido_web #contenido_web_izq .cont_catalogo .paginacion {
+    clear: both;
+    margin: 5px 0px 0px 0px;
+    padding: 5px 0px 0px 0px;
+    height: 25px;
+    width: 570px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    color: #909090;
+    text-shadow: 2px 2px 2px #FFFFFF;
+    text-align: center;
+    background: #e2ecf1 ;
+    border-bottom: solid 2px #5c9bbb;
+}
+
+#contenido #contenido_cen #contenido_web #contenido_web_izq .cont_catalogo .paginacion a:link, #contenido #contenido_cen #contenido_web #contenido_web_izq .cont_catalogo .paginacion a:visited {
+    text-decoration: none;
+    color: #909090;
+}
+
+#contenido #contenido_cen #contenido_web #contenido_web_izq .cont_catalogo .paginacion a:hover, #contenido #contenido_cen #contenido_web #contenido_web_izq .cont_catalogo .paginacion a:active {
+    text-decoration: none;
+    color: #909090;
+}
+
+/*
+ --------------------
+ CONTENIDO: UBICACION
+ --------------------
+*/
+
+#contenido #contenido_cen #contenido_web #contenido_web_izq #map {
+	display: block;
+	width: 570px;
+	height: 300px;
+	margin: 0 auto;
+	border: 2px solid #5C9BBB;
+}
+
+#contenido #contenido_cen #contenido_web #contenido_web_izq #map.large{
+  height:500px;
+}
+
+/*
+ -------------------
+ CONTENIDO: CONTACTO
+ -------------------
+*/
+
+#contenido #contenido_cen #contenido_web #contenido_web_izq .titulo_contacto h3{
+    margin: 0px auto;
+    padding: 4px 0px 0px 35px;
+    height: 25px;
+    width: 570px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #909090;
+    text-shadow: 2px 2px 2px #FFFFFF;
+    background: url(imagenes/form_ico.png) #e2ecf1 no-repeat left;
+    border-right: solid 2px #5c9bbb;
+}
+
+/*
+  -----------------
+  CONTENIDO WEB DER
+  -----------------
+*/
+
+#contenido #contenido_cen #contenido_web #contenido_web_der {
+    float: left;
+    margin: 0px 0px 0px 28px;
+    width: 274px;
+}
+
+#contenido #contenido_cen #contenido_web #contenido_web_der .titulo h3{
+    margin: 0px auto;
+    padding: 3px 0px 0px 35px;
+    height: 25px;
+    width: 239px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #909090;
+    text-shadow: 2px 2px 2px #FFFFFF;
+    background: url(imagenes/buy_ico.png) #e2ecf1 no-repeat left;
+    border-right: solid 2px #5c9bbb;
+}
+
+#contenido #contenido_cen #contenido_web #contenido_web_der .productos {
+    float: left;
+    margin: 0px auto;
+    margin: 5px 0px 0px 0px;
+    height: 94px;
+    width: 276px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: #909090;
+    text-shadow: 2px 2px 2px #FFFFFF;
+    background: #e2ecf1;
+    border-bottom: solid 2px #5c9bbb;
+}
+
+#contenido #contenido_cen #contenido_web #contenido_web_der  .productos .img img {
+    float: left;
+    margin: 6px 10px 5px 10px;
+    height: 80px;
+    width: 80px;
+    border: solid 2px #5c9bbb;
+}
+
+#contenido #contenido_cen #contenido_web #contenido_web_der .productos .info {
+    margin: -8px 0px 0px 0px;
+    float : left;
+}
+
+#contenido #contenido_cen #contenido_web #contenido_web_der  .productos .nombre {
+    margin: 6px 0px 0px 0px;
+    padding: 16px 0px 0px 12px;
+    background: url(imagenes/info_ico.jpg) left no-repeat;
+}
+
+#contenido #contenido_cen #contenido_web #contenido_web_der  .productos .codigo {
+    margin: -15px 0px 0px 0px;
+    padding: 16px 0px 0px 12px;
+    background: url(imagenes/info_ico.jpg) left no-repeat;
+}
+
+/*
+ ---------------------
+ CONTENIDO: CATEGORIAS
+ ---------------------
+*/
+
+#contenido #contenido_cen #contenido_web #contenido_web_der .titulo_categoria h3{
+    margin: 0px auto;
+    padding: 3px 0px 0px 30px;
+    height: 25px;
+    width: 239px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #909090;
+    text-shadow: 2px 2px 2px #FFFFFF;
+    background: url(imagenes/cat_ico.png) #e2ecf1 no-repeat left;
+    border-right: solid 2px #5c9bbb;
+}
+
+#contenido #contenido_cen #contenido_web #contenido_web_der .cont_categoria {
+    margin: 6px 0px 0px 0px;
+    padding: 3px 0px 0px 30px;
+    height: 23px;
+    width: 242px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    color: #909090;
+    text-shadow: 2px 2px 2px #FFFFFF;
+    background: url(imagenes/cat_ico.jpg) #e2ecf1 no-repeat left;
+    border-bottom: solid 2px #5c9bbb;
+}
+
+#contenido #contenido_cen #contenido_web #contenido_web_der .cont_categoria a:link, #contenido #contenido_cen #contenido_web #contenido_web_der .cont_categoria a:visited {
+    text-decoration: none;
+    color: #909090;
+}
+
+#contenido #contenido_cen #contenido_web #contenido_web_der .cont_categoria a:hover, #contenido #contenido_cen #contenido_web #contenido_web_der .cont_categoria a:active {
+    text-decoration: none;
+    color: #909090;
+}
+
+#contenido #contenido_aba {
+    margin: 0px auto;
+    height: 22px;
+    width: 940px;
+    background: url(imagenes/contenido_aba.jpg) center no-repeat;
+}
+
+/*
+ ---------------------
+ CONTENIDO: UBICACION
+ ---------------------
+*/
+
+#contenido #contenido_cen #contenido_web #contenido_web_der .titulo_ubicacion h3{
+    margin: 0px auto;
+    padding: 3px 0px 0px 30px;
+    height: 25px;
+    width: 239px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #909090;
+    text-shadow: 2px 2px 2px #FFFFFF;
+    background: url(imagenes/ubi_ico.png) #e2ecf1 no-repeat left;
+    border-right: solid 2px #5c9bbb;
+}
+
+#contenido #contenido_cen #contenido_web #contenido_web_der .ubicacion {
+    margin: 0px auto;
+    margin: 10px 0px 0px 0px;
+    padding: 5px;
+    width: 262px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    color: #909090;
+    text-shadow: 2px 2px 2px #FFFFFF;
+    background: #e2ecf1;
+    border-bottom: solid 2px #5c9bbb;
+}
+
+/*
+ -------------------
+ CONTENIDO: CONTACTO
+ -------------------
+*/
+
+#contenido #contenido_cen #contenido_web #contenido_web_der .titulo_horarios h3{
+    margin: 0px auto;
+    padding: 3px 0px 0px 30px;
+    height: 25px;
+    width: 239px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #909090;
+    text-shadow: 2px 2px 2px #FFFFFF;
+    background: url(imagenes/hor_ico.png) #e2ecf1 no-repeat left;
+    border-right: solid 2px #5c9bbb;
+}
+
+#contenido #contenido_cen #contenido_web #contenido_web_der .horarios {
+    margin: 0px auto;
+    margin: 10px 0px 0px 0px;
+    padding: 5px;
+    width: 262px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    color: #909090;
+    text-shadow: 2px 2px 2px #FFFFFF;
+    background: #e2ecf1;
+    border-bottom: solid 2px #5c9bbb;
+}
+
+/*
+ -------------
+ PIE DE PAGINA
+ -------------
+*/
+
+#piepag {
+    width: 100%;
+    height: 65px;
+    background: url(imagenes/fdo_pie.png) repeat-x;	  
+}
+
+#piepag #cont_piepag {
+    margin: 0px auto;
+    width: 940px;
+}
+
+#piepag #cont_piepag .logo {
+    overflow: hidden;
+    float: left;
+    margin: 0px 20px 0px 0px;
+    width: 355px;
+    height: 65px;
+}
+
+#piepag #cont_piepag #copy {
+    float: left;
+    margin: 35px 0px 0px 0px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    color: #909090;
+    text-shadow: 2px 2px 2px #FFFFFF;
+}

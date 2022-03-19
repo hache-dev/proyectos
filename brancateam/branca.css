@@ -1,0 +1,616 @@
+/*
+-----------------------------------------
+# Author : Fernando C�ceres
+# Client: Branca-Team
+# Date: 17.04.2011
+# Description: Style Branca-Team Web Site
+-----------------------------------------
+*/
+
+BODY {
+    background: url(imagenes/fondo.png) center top no-repeat #333333;
+    font-family: Arial, Geneva, sans-serif;
+}
+
+*:focus  {  
+	outline: none; 
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/*
+ Contenedor
+ ----------
+*/
+#contenedor_web {
+    width: 740px;
+    margin: 0px auto;
+}
+
+/*
+ Menu
+ ----
+*/
+#contenedor_web #menu {
+    width: 740px;
+    height: 54px;
+    background: url(imagenes/menu.png) center no-repeat;
+}
+
+#menu #menu_izq {
+    width: 6px;
+    height: 48px;
+    margin: 4px 0px 0px 4px;
+    float: left;
+    background: url(imagenes/menu_izq.png) center no-repeat;
+}
+
+#menu #menu_cen {
+    width: 720px;
+    height: 48px;
+    margin: 4px 0px 0px 0px;
+    float: left;
+    background: url(imagenes/menu_cen.png) center repeat-x;
+}
+
+#menu #menu_cen #menu_texto {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-shadow: 1px 1px #000000;
+    letter-spacing: 1px;
+    padding: 3px 0px 0px 10px;
+}
+
+#menu #menu_cen #menu_texto li{
+    list-style: none;
+    display: inline;
+    margin: 5px;
+}
+
+#menu #menu_cen #menu_texto a:link, #menu #menu_cen #menu_texto a:visited{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#menu #menu_cen #menu_texto a:hover, #menu #menu_cen #menu_texto a:active{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#menu #menu_der {
+    width: 6px;
+    height: 48px;
+    margin: 4px 4px 0px 0px;
+    float: left;
+    background: url(imagenes/menu_der.png) center no-repeat;
+}
+
+/*
+ Contenido web
+ -------------
+*/
+#contenido_web {
+    width: 740px;
+    overflow: auto;
+    margin: -1px 0px 0px 0px;
+    background: url(imagenes/contenido_web.png) center repeat-y;
+}
+
+/*
+ Noticias
+ --------
+*/
+#noticias {
+    width: 732px;
+    height: 24px;
+    margin: 2px 0px 2px 4px;
+}
+
+#noticias #noticias_izq {
+    width: 2px;
+    height: 24px;
+    float: left;
+    background: url(imagenes/noticias_izq.png) center no-repeat;
+}
+
+#noticias #noticias_cen {
+    width: 728px;
+    height: 24px;
+    float: left;
+    background: url(imagenes/noticias_cen.png) center repeat-x;
+}
+
+#noticias #noticias_cen #noticias_texto {
+    width: 100%;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+    color: #92a723;
+    text-shadow: 1px 1px #FFFFFF;
+    letter-spacing: 1px;
+    margin: 6px 0px 0px 5px;
+    float: left;
+}
+
+#noticias #noticias_cen #noticias_texto a{
+    color: #484848;
+    text-shadow: 1px 1px #FFFFFF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: lowercase;
+}
+
+#noticias #noticias_cen #noticias_rss {
+    margin: 0px 0px 0px 0px;
+    float: left;
+}
+
+#noticias #noticias_der {
+    width: 2px;
+    height: 24px;
+    float: left;
+    background: url(imagenes/noticias_der.png) center no-repeat;
+}
+
+/*
+ Cabecera
+ --------
+*/
+#cabecera {
+    width: 732px;
+    height: 179px;
+    margin: 2px 0px 2px 4px;
+}
+
+/*
+ Contenido izquierda
+ -------------------
+*/
+#contenido_izq {
+    width: 488px;
+    float: left;
+}
+
+#contenido_izq #contenido_arriba_izq_izq {
+    width: 5px;
+    height: 40px;
+    margin: 2px 0px 2px 4px;
+    float: left;
+    background: url(imagenes/contenido_arriba_izq.png) center no-repeat;
+}
+
+#contenido_izq #contenido_arriba_izq_cen {
+    width: 474px;
+    height: 40px;
+    margin: 2px 0px 2px 0px;
+    float: left;
+    background: url(imagenes/contenido_arriba_cen.png) center repeat-x;
+}
+
+#contenido_izq #contenido_arriba_izq_cen #contenido_arriba_texto_izq_cen {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-shadow: 1px 1px #000000;
+    letter-spacing: 1px;
+    margin: 10px 0px 0px 0px;
+}
+
+#contenido_izq #contenido_arriba_izq_der {
+    width: 5px;
+    height: 40px;
+    margin: 2px 0px 5px 0px;
+    float: left;
+    background: url(imagenes/contenido_arriba_der.png) center no-repeat;
+}
+
+#contenido_izq #contenido_izq_texto {
+    width: 484px;
+    margin: 0px 0px 0px 4px;
+    background: #484848 repeat-y;
+}
+
+#contenido_izq #contenido_izq_texto #contenido_izq_cen_texto {
+    font-family: Arial, Geneva, sans-serif;
+    font-size: 11px;
+    color: #FFFFFF;
+    margin: 5px 0px 0px 8px;
+    padding: 0px 0px 6px 0px;
+}
+
+#contenido_izq #contenido_abajo_izq_izq {
+    width: 5px;
+    height: 30px;
+    margin: 0px 0px 0px 4px;
+    float: left;
+    background: url(imagenes/contenido_abajo_izq.png) center no-repeat;
+}
+
+#contenido_izq #contenido_abajo_izq_cen {
+    width: 474px;
+    height: 30px;
+    margin: 0px 0px 0px 0px;
+    float: left;
+    background: url(imagenes/contenido_abajo_cen.png) center repeat-x;
+}
+
+#contenido_izq #contenido_abajo_izq_der {
+    width: 5px;
+    height: 30px;
+    margin: 0px 0px 0px 0px;
+    float: left;
+    background: url(imagenes/contenido_abajo_der.png) center no-repeat;
+}
+
+/*
+ Facebook
+ ------------------------------------
+*/
+
+#facebook {
+    position:absolute;
+    width:90px;
+    height:90px;
+}
+
+/*
+ Contenido Miembros y Administradores
+ ------------------------------------
+*/
+
+.miembros ul li {
+    display: inline;
+    list-style-type: none;
+    margin: 4px;
+}
+
+.miembros img {
+    border: 2px solid #282828;
+}
+
+/*
+ Contenido Descargas
+ -------------------
+*/
+
+.descargas {
+    width: 470px;
+    margin: 0px auto;
+    padding: 0px 0px 6px 0px;
+    overflow: auto;
+}
+
+.descargas .descargas_izq {
+    width: 7px;
+    height: 26px;
+    float: left;
+    background: url(imagenes/descarga_izq.png) center no-repeat;
+}
+
+.descargas .descargas_cen {
+    width: 445px;
+    height: 26px;
+    float: left;
+    background: url(imagenes/descarga_cen.png) center repeat-x;
+}
+
+.descargas .descargas_cen .texto {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px #000000;
+    margin: 5px 0px 0px 0px;
+}
+
+.descargas .descargas_cen .texto .bajar {
+    float: right;
+}
+
+.descargas .descargas_der {
+    width: 7px;
+    height: 26px;
+    float: left;
+    background: url(imagenes/descarga_der.png) center no-repeat;
+}
+
+/*
+ Contenido Contacto
+ ------------------
+*/
+.FormTexto {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-shadow: 1px 1px #000000;
+    letter-spacing: 1px;
+}
+.FormCampos {
+	font-family: Arial, Geneva, sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+	width: 200px;
+	height: 20px;
+	background: #484848;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #242424;
+}
+
+.FormArea {
+	font-family: Arial, Geneva, sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+	height: 100px;
+	background: #484848;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #242424;
+}
+.FormBoton {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-shadow: 1px 1px #000000;
+    letter-spacing: 1px;
+	background: #484848;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #242424;
+}
+/*
+ Contenido derecha
+ -----------------
+*/
+
+#contenido_der {
+    width: 248px;
+    float: left;
+}
+
+#contenido_der #contenido_arriba_der_izq {
+    width: 5px;
+    height: 40px;
+    margin: 2px 0px 2px 4px;
+    float: left;
+    background: url(imagenes/contenido_arriba_izq.png) center no-repeat;
+}
+
+#contenido_der #contenido_arriba_der_cen {
+    width: 234px;
+    height: 40px;
+    margin: 2px 0px 0px 0px;
+    float: left;
+    background: url(imagenes/contenido_arriba_cen.png) center repeat-x;
+}
+
+#contenido_der #contenido_arriba_der_cen #contenido_arriba_texto_der_cen {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-shadow: 1px 1px #000000;
+    letter-spacing: 1px;
+    margin: 10px 0px 0px 0px;
+}
+
+#contenido_der #contenido_arriba_der_der {
+    width: 5px;
+    height: 40px;
+    margin: 2px 0px 2px 0px;
+    float: left;
+    background: url(imagenes/contenido_arriba_der.png) center no-repeat;
+}
+
+#contenido_der #contenido_der_texto {
+    width: 244px;
+    margin: 0px 0px 0px 4px;
+    background: #484848 repeat-y;
+}
+
+#contenido_der #contenido_der_texto #contenido_der_cen_texto {
+    font-family: Arial, Geneva, sans-serif;
+    font-size: 11px;
+    color: #FFFFFF;
+    margin: 5px 0px 0px 8px;
+}
+
+#contenido_der #contenido_abajo_der_izq {
+    width: 5px;
+    height: 30px;
+    margin: 0px 0px 0px 4px;
+    float: left;
+    background: url(imagenes/contenido_abajo_izq.png) center no-repeat;
+}
+
+#contenido_der #contenido_abajo_der_cen {
+    width: 234px;
+    height: 30px;
+    margin: 0px 0px 0px 0px;
+    float: left;
+    background: url(imagenes/contenido_abajo_cen.png) center repeat-x;
+}
+
+#contenido_der #contenido_abajo_der_der {
+    width: 5px;
+    height: 30px;
+    margin: 0px 0px 0px 0px;
+    float: left;
+    background: url(imagenes/contenido_abajo_der.png) center no-repeat;
+}
+
+
+/*
+ Contenido Servidores
+ ---------------------
+*/
+
+.space {
+    font-size: 1px;
+    color: #484848;
+    text-align: center;
+}
+
+#quieroadmin {
+    height: 104px;
+    padding: 12px 0px 0px 0px;
+    text-align: center;
+}
+
+.servidores {
+    width: 230px;
+    margin: 0px auto;
+    padding: 5px 0px 5px 10px;
+    overflow: auto;
+}
+
+.servidores .ip_izq {
+    width: 5px;
+    height: 31px;
+    background: url(imagenes/ip_izq.png) center no-repeat;
+    float: left;
+}
+
+.servidores .ip_cen {
+    width: 150px;
+    height: 31px;
+    background: url(imagenes/ip_cen.png) center  repeat-x;
+    float: left;
+}
+
+.servidores .ip_cen .csico {
+    margin: 7px 7px 0px 0px;
+    float: left;
+}
+
+.servidores .ip_cen .texto {
+    font-size: 12px;
+    font-family: Arial, Geneva, sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #FFFFFF;
+    color: #5B7C01;
+    margin: 7px 0px 0px 0px;
+}
+
+.servidores .ip_der {
+    height: 31px;
+    border-right: 1px solid #B3B3B3;
+    margin: 0px 0px 0px 0px;
+    float: left;
+}
+
+.servidores .info_izq {
+    height: 31px;
+    border-left: 1px solid #B3B3B3;
+    margin: 0px 0px 0px 5px;
+    float: left;
+}
+
+.servidores .info_cen {
+    width: 35px;
+    height: 31px;
+    background: url(imagenes/info_cen.png) center  repeat-x;
+    float: left;
+}
+
+.servidores .info_cen .info {
+    margin: 7px 0px 0px 10px;
+}
+
+.servidores .info_der {
+    width: 5px;
+    height: 31px;
+    background: url(imagenes/info_der.png) center no-repeat;
+    float: left;
+}
+/*
+ Contenido web abajo
+ -------------------
+*/
+#contenido_web_abajo {
+    width: 740px;
+    height: 6px;
+    background: url(imagenes/contenido_web_abajo.png) center no-repeat;
+}
+
+/*
+ RSS Ticker
+ ----------
+*/
+.rssFeed {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    width: 400px;
+    margin-bottom: 2em;
+    font-weight: normal;
+}
+.rssFeed a {
+    font-weight: normal;
+    color: #797979;
+    text-decoration: none;
+}
+.rssFeed a:hover {
+    font-weight: normal;
+    color: #797979;
+    text-decoration: none;
+}
+
+.rssHeader { 
+    padding: 0.2em 0; 
+}
+
+.rssRow h4, .rssRow p, .rssRow div {
+    margin: 0;
+    padding: 0.5em;
+}
+
+#ticker1 .odd { 
+    background-color: transparent;
+}
+#ticker1 .even { 
+    background-color: transparent;
+}
+
+/*
+ Pie de pagina
+ -------------
+*/
+
+#pie {
+    width: 700px;
+    height: 27px;
+    margin: 0px auto;
+}
+
+#pie #pie_izq {
+    width: 5px;
+    height: 27px;
+    float: left;
+    background: url(imagenes/pie_izq.png) center no-repeat;
+}
+
+#pie #pie_cen {
+    width: 690px;
+    height: 27px;
+    float: left;
+    background: url(imagenes/pie_cen.png) center repeat-x;
+}
+
+#pie #pie_cen #pie_texto {
+    font-family: Arial, Geneva, sans-serif;
+    font-size: 11px;
+    color: #5B7C01;
+    text-shadow: 1px 1px #FFFFFF;
+    margin: 5px 0px 0px 10px;
+}
+
+#pie #pie_der {
+    width: 5px;
+    height: 27px;
+    float: left;
+    background: url(imagenes/pie_der.png) center no-repeat;
+}

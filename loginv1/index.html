@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Login</title>
+<link href="estilo.css" rel="stylesheet" type="text/css" />
+<link href="js/tip/tip-darkgray/tip-darkgray.css" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+<script src="js/tip/jquery.poshytip.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+        $('#tip').poshytip({
+        className: 'tip-darkgray',
+        bgImageFrameSize: 11,
+        offsetX: -25
+        })
+    });
+</script>
+<!--[if IE 6]>
+<script scr="js/fix/DD_belatedPNG.js" type="text/javascript"></script>
+<script>
+  DD_belatedPNG.fix('#login, img');
+</script>
+<![endif]-->
+</head>
+
+<body>
+    
+    <div id="login">
+        <div id="top">
+            <div id="title">
+                Login
+            </div>
+            <div id="help">
+                <a href="#">
+                    <img id="tip" src="images/login-help.png" border="0" alt="Ayuda" title="Es necesario estar registrado!"/>
+                </a>
+            </div>
+        </div>
+        <div id="login-form">
+            <div id="lock">
+                <img src="images/login-lock.png" alt="Login" />
+            </div>
+            <div id="form">
+                <form method="post" action="#">
+                    <div class="input">
+                        <div class="text">
+                            Usuario: 
+                        </div>
+                        <input type="text" name="user" id="user" />
+                    </div>
+                    <div class="input">
+                        <div class="text">
+                            Contraseña: 
+                        </div>
+                      <input type="password" name="pass" id="pass" />
+                    </div>
+                    <div id="button">
+                        <input type="image" src="images/login-button.jpg" name="Ingresar!" />
+                    </div>
+                </form>
+            </div>
+            <div id="info">
+                <div id="register">
+                    <a href="#">Regístrate</a>
+                </div>
+                <div id="lostpass">
+                    <a href="#">¿Has olvidado tu contraseña?</a>
+                </div>
+            </div>
+        </div>
+        <div id="login-foot">
+            <img src="images/login-foot.png" alt="Login" />
+        </div>
+    </div>
+</body>
+</html>
