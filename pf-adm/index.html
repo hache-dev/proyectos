@@ -46,7 +46,7 @@
             font-size: 2em;
         }
 
-        td {
+        td, th {
             white-space: nowrap;
             /* Impide el quiebre de línea */
             word-break: break-word;
@@ -82,6 +82,9 @@
                                 <a class="nav-link active" aria-current="page" href="index.html"><i
                                         class="bi bi-house"></i>
                                     Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="alta-cliente.html"><i class="bi bi-person-add"></i> Alta Cliente</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="clientes.html"><i class="bi bi-people"></i> Clientes</a>
@@ -145,11 +148,11 @@
                     <table class="table table-dark table-hover table-striped round_table">
                         <thead>
                             <tr>
-                                <th scope="col">Cliente</th>
-                                <th scope="col">Monto</th>
-                                <th scope="col">Inicio</th>
-                                <th scope="col">Vcto.</th>
-                                <th scope="col">Estado</th>
+                                <th scope="col"><i class="bi bi-person"></i> Cliente</th>
+                                <th scope="col"><i class="bi bi-currency-dollar"></i> Monto</th>
+                                <th scope="col"><i class="bi bi-calendar-event"></i> Fecha de inicio</th>
+                                <th scope="col"><i class="bi bi-calendar-x"></i> Fecha de Vcto.</th>
+                                <th scope="col"><i class="bi bi-info-circle"></i> Estado</th>
                             </tr>
                         </thead>
                         <tbody>
