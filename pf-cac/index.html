@@ -99,12 +99,9 @@
                                     Préstamos</a>
                             </li>
                         </ul>
-                        <form class="d-flex" role="search">
                             <input
-                                class="form-control me-2 d-inline-flex focus-ring focus-ring-secondary py-1 px-2 text-decoration-none border rounded-2"
-                                type="search" placeholder="Buscar cliente..." aria-label="Buscar cliente...">
-                            <button class="btn btn-outline-dark" type="submit"><i class="bi bi-search"></i></button>
-                        </form>
+                                class="d-flex form-control me-2 d-inline-flex focus-ring focus-ring-secondary py-1 px-2 text-decoration-none border rounded-2"
+                                type="search" placeholder="Buscar cliente..." id="buscarInput" aria-label="Buscar cliente...">
                     </div>
                 </div>
             </nav>
@@ -335,6 +332,36 @@ function formatearFecha(fecha) {
 
     return `${dia}/${mes}/${año}`;
 }
+        </script>
+
+                <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const buscarInput = document.getElementById('buscarInput');
+                const clientesTable = document.getElementById('prestamos-table').getElementsByTagName('tbody')[0];
+
+                // Función para buscar y filtrar filas de la tabla
+                function buscarClientes() {
+                    const filtro = buscarInput.value.toLowerCase();
+                    const filas = clientesTable.getElementsByTagName('tr');
+
+                    for (const fila of filas) {
+                        let mostrarFila = false;
+                        const celdas = fila.getElementsByTagName('td');
+
+                        for (const celda of celdas) {
+                            if (celda.innerText.toLowerCase().includes(filtro)) {
+                                mostrarFila = true;
+                                break;
+                            }
+                        }
+
+                        fila.style.display = mostrarFila ? '' : 'none';
+                    }
+                }
+
+                // Añadir evento para buscar mientras el usuario escribe
+                buscarInput.addEventListener('input', buscarClientes);
+            });
         </script>
 
 
