@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <title>PlataFácil - Clientes & Préstamos</title>
+    <style>
+        body {
+
+            background: url('img/bg.png') center center #212529;
+            background-size: cover;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container-sm {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(var(--acrylic-blur, 10px));
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 1px 19px 21px -9px rgba(0, 0, 0, 0.50);
+            -webkit-box-shadow: 1px 19px 21px -9px rgba(0, 0, 0, 0.50);
+            -moz-box-shadow: 1px 19px 21px -9px rgba(0, 0, 0, 0.50);
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(var(--acrylic-blur, 0px));
+            margin: 0px auto;
+            width: 100%;
+        }
+
+
+        .navbar-brand {
+            font-size: 2em;
+        }
+
+
+
+        /* Espaciado entre los fieldsets y elementos internos */
+        /*fieldset {
+            margin-bottom: 1rem;
+        }*/
+
+        fieldset legend {
+            /*margin-bottom: 0.5rem;*/
+            font-size: 1.2rem;
+        }
+
+        /*.round_table {
+            border-collapse: separate;
+            border: solid #BABABA 1px;
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 5px;
+        }*/
+
+        .form-floating>.form-control,
+        .form-floating>.form-control-plaintext {
+            background-color: #F3F3F3;
+        }
+
+        .form-floating>.form-select {
+            background-color: #F3F3F3;
+        }
+
+        .form-control[type=file]:not(:disabled):not([readonly]) {
+            cursor: pointer;
+            background: #F3F3F3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-sm">
+        <div class="content-sm">
+            <nav class="navbar navbar-expand-lg" style="border-bottom: 1px solid rgba(255, 255, 255, 0.3);">
+                <div class="container-fluid">
+                    <a class="navbar-brand pt-0" href="#">
+                        <span class="badge text-bg-dark"> <i class="bi bi-piggy-bank-fill"></i> PlataFácil
+                        </span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html"><i
+                                        class="bi bi-house"></i>
+                                    Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="alta-cliente.html"><i class="bi bi-person-add"></i> Alta </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="clientes.html"><i class="bi bi-people"></i> Clientes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="prestamos.html"><i class="bi bi-currency-dollar"></i>
+                                    Préstamos</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input
+                                class="form-control me-2 d-inline-flex focus-ring focus-ring-secondary py-1 px-2 text-decoration-none border rounded-2"
+                                type="search" placeholder="Buscar cliente..." aria-label="Buscar cliente...">
+                            <button class="btn btn-outline-dark" type="submit"><i class="bi bi-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="card mt-4 mb-3">
+                <div class="card-header">
+                    <h5><i class="bi bi-person-add"></i> Editar Préstamos</h5>
+                </div>
+                <div class="card-body">
+
+                    <form id="editarPrestamoForm" method="post" enctype="multipart/form-data">
+
+                        <input type="hidden" id="prestamoId" name="prestamoId">
+
+                        <div class="btn btn-secondary btn mb-2 disabled">
+                            <i class="bi bi-person"></i>
+                            <span id="nombreClienteEdit"></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm mb-2">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="clienteIdEdit" name="clienteIdEdit" readonly disable>
+                                        <label for="clienteIdEdit" class="form-label">ID Cliente</label>
+                                </div>
+                            </div>
+                            <div class="col-sm mb-2">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="montoEdit" name="montoEdit">
+                                        <label for="montoEdit" class="form-label">Monto</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm mb-2">
+                                <div class="form-floating">
+                                    <input type="date" class="form-control" id="fechaInicioEdit" name="fechaInicioEdit">
+                                    <label for="fechaInicioEdit" class="form-label">Fecha de Inicio</label>
+                                </div>
+                            </div>
+                            <div class="col-sm mb-2">
+                                <div class="form-floating">
+                                    <input type="date" class="form-control" id="fechaVtoEdit" name="fechaVtoEdit">
+                                        <label for="fechaVtoEdit" class="form-label">Fecha Vencimiento</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6 mb-2">
+                                <div class="form-floating">
+                                    <select class="form-select" id="estadoEdit" name="estadoEdit">
+                                        <option value="Activo">Activo</option>
+                                        <option value="Pagado">Pagado</option>
+                                        <option value="Vencido">Vencido</option>
+                                    </select>
+                                    <label for="estadoEdit" class="form-label">Fecha de Inicio</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-outline-success" id="btnGuardar">Guardar</button>
+
+                    </form>
+
+                    
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <h6 class="text-center">sɪsᴛᴇᴍᴀ ʀᴇɢɪsᴛʀᴏ ᴅᴇ ᴄʟɪᴇɴᴛᴇs & ᴘʀᴇsᴛᴀᴍᴏs</h6>
+
+
+
+
+    </div>
+
+    <!-- Toast container -->
+    <div id="toast-container" data-bs-theme="dark" class="toast-container position-fixed bottom-0 end-0 p-3"
+        style="z-index: 11;"></div>
+
+    <!-- Bootstrap JavaScript and dependencies -->
+    <script>
+// URL de la API para editar un préstamo
+const API_URL_EDITAR_PRESTAMO = 'http://127.0.0.1:5000/prestamos';
+const API_URL_CLIENTES = 'http://localhost:5000/clientes';  // Cambia el puerto si es diferente
+
+// Función para mostrar un toast con Bootstrap
+function mostrarToast(mensaje, tipo) {
+    // Obtener el contenedor de toasts
+    const toastContainer = document.getElementById('toast-container');
+
+    // Crear el elemento del toast
+    const toast = document.createElement('div');
+    toast.classList.add('toast', `bg-${tipo}`, 'text-white');
+    toast.setAttribute('role', 'alert');
+    toast.setAttribute('aria-live', 'assertive');
+    toast.setAttribute('aria-atomic', 'true');
+
+    // Crear el contenido del toast
+    toast.innerHTML = `
+        <div class="toast-header">
+            <strong class="me-auto">Mensaje</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+        </div>
+        <div class="toast-body">
+            ${mensaje}
+        </div>
+    `;
+
+    // Agregar el toast al contenedor
+    toastContainer.appendChild(toast);
+
+    // Crear un objeto Bootstrap Toast a partir del elemento
+    const bootstrapToast = new bootstrap.Toast(toast);
+
+    // Mostrar el toast
+    bootstrapToast.show();
+}
+
+// Función para ajustar la fecha en formato "yyyy-MM-dd" para enviar al backend
+function ajustarFechaParaBackend(fecha) {
+    const dateObj = new Date(fecha);
+    // Convertir a UTC y luego obtener la fecha en formato YYYY-MM-DD
+    const fechaUTC = dateObj.toISOString().split('T')[0];
+    return fechaUTC;
+}
+
+// Función para actualizar préstamo
+function actualizarPrestamo() {
+    const prestamoId = document.getElementById('prestamoId').value;
+    const clienteId = document.getElementById('clienteIdEdit').value;
+    const monto = parseFloat(document.getElementById('montoEdit').value);
+    const fechaInicio = ajustarFechaParaBackend(document.getElementById('fechaInicioEdit').value);
+    const fechaVto = ajustarFechaParaBackend(document.getElementById('fechaVtoEdit').value);
+    const estado = document.getElementById('estadoEdit').value;
+
+    const prestamoData = {
+        cliente_id: clienteId,
+        Monto: monto,
+        Fecha_inicio: fechaInicio,
+        Fecha_vcto: fechaVto,
+        Estado: estado
+    };
+
+    fetch(`${API_URL_EDITAR_PRESTAMO}/${prestamoId}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(prestamoData)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error al actualizar el préstamo');
+        }
+        return response.json();
+    })
+    .then(data => {
+        mostrarToast('Préstamo actualizado correctamente', 'success');
+        setTimeout(() => {
+            window.location.href = 'prestamos.html';
+        }, 1500);
+    })
+    .catch(error => {
+        console.error('Error al actualizar préstamo:', error.message);
+        mostrarToast('Error al actualizar préstamo', 'danger');
+    });
+}
+
+// Función para cargar datos de un préstamo para editar
+function cargarDatosPrestamo(prestamoId) {
+    fetch(`${API_URL_EDITAR_PRESTAMO}/${prestamoId}`)
+        .then(response => response.json())
+        .then(prestamo => {
+            // Establecer datos del préstamo en el formulario
+            document.getElementById('prestamoId').value = prestamo.id;
+            document.getElementById('clienteIdEdit').value = prestamo.cliente_id;
+            document.getElementById('montoEdit').value = prestamo.Monto;
+
+            // Formatear y establecer la fecha de inicio en el formato "yyyy-MM-dd"
+            const fechaInicio = new Date(prestamo.Fecha_inicio);
+            document.getElementById('fechaInicioEdit').value = formatDate(fechaInicio);
+
+            // Formatear y establecer la fecha de vencimiento en el formato "yyyy-MM-dd"
+            const fechaVto = new Date(prestamo.Fecha_vcto);
+            document.getElementById('fechaVtoEdit').value = formatDate(fechaVto);
+
+            document.getElementById('estadoEdit').value = prestamo.Estado;
+
+            // Obtener y mostrar nombre completo del cliente
+            cargarNombreCliente(prestamo.cliente_id);
+        })
+        .catch(error => {
+            console.error('Error al cargar datos del préstamo:', error);
+            mostrarToast('Error al cargar datos del préstamo', 'danger');
+        });
+}
+
+// Función para formatear la fecha en "yyyy-MM-dd"
+function formatDate(date) {
+    const year = date.getUTCFullYear();
+    const month = String(date.getUTCMonth() + 1).padStart(2, '0');
+    const day = String(date.getUTCDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+}
+
+// Función para obtener y mostrar nombre completo del cliente
+function cargarNombreCliente(clienteId) {
+    fetch(`${API_URL_CLIENTES}/${clienteId}`)
+        .then(response => response.json())
+        .then(cliente => {
+            // Mostrar nombre y apellido del cliente en el formulario
+            const nombreCompleto = `${cliente.Nombre} ${cliente.Apellido}`;
+            document.getElementById('nombreClienteEdit').innerText = nombreCompleto;
+        })
+        .catch(error => {
+            console.error('Error al obtener detalles del cliente:', error);
+            document.getElementById('nombreClienteEdit').innerText = 'Cliente no encontrado';
+        });
+}
+
+
+
+
+// Obtener el ID del préstamo de la URL (ej. editar-prestamo.html?id=1)
+const urlParams = new URLSearchParams(window.location.search);
+const prestamoId = urlParams.get('id');
+
+if (prestamoId) {
+    cargarDatosPrestamo(prestamoId);
+}
+
+// Event listener para el botón de guardar
+document.addEventListener('DOMContentLoaded', () => {
+    const btnGuardar = document.getElementById('btnGuardar');
+    if (btnGuardar) {
+        btnGuardar.addEventListener('click', actualizarPrestamo);
+    } else {
+        console.error('No se encontró el botón btnGuardar');
+    }
+});
+
+
+    </script>
+
+
+</body>
+
+</html>

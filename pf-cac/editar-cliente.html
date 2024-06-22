@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <title>PlataFácil - Clientes & Préstamos</title>
+    <style>
+        body {
+
+            background: url('img/bg.png') center center #212529;
+            background-size: cover;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container-sm {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(var(--acrylic-blur, 10px));
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 1px 19px 21px -9px rgba(0, 0, 0, 0.50);
+            -webkit-box-shadow: 1px 19px 21px -9px rgba(0, 0, 0, 0.50);
+            -moz-box-shadow: 1px 19px 21px -9px rgba(0, 0, 0, 0.50);
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(var(--acrylic-blur, 0px));
+            margin: 0px auto;
+            width: 100%;
+        }
+
+
+        .navbar-brand {
+            font-size: 2em;
+        }
+
+
+
+        /* Espaciado entre los fieldsets y elementos internos */
+        /*fieldset {
+            margin-bottom: 1rem;
+        }*/
+
+        fieldset legend {
+            /*margin-bottom: 0.5rem;*/
+            font-size: 1.2rem;
+        }
+
+        /*.round_table {
+            border-collapse: separate;
+            border: solid #BABABA 1px;
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 5px;
+        }*/
+
+        .form-floating>.form-control, .form-floating>.form-control-plaintext  {
+        background-color: #F3F3F3;
+}
+
+.form-floating>.form-select {
+    background-color: #F3F3F3;
+}
+
+.form-control[type=file]:not(:disabled):not([readonly]) {
+    cursor: pointer;
+    background: #F3F3F3;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container-sm">
+        <div class="content-sm">
+            <nav class="navbar navbar-expand-lg" style="border-bottom: 1px solid rgba(255, 255, 255, 0.3);">
+                <div class="container-fluid">
+                    <a class="navbar-brand pt-0" href="#">
+                        <span class="badge text-bg-dark"> <i class="bi bi-piggy-bank-fill"></i> PlataFácil
+                        </span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html"><i
+                                        class="bi bi-house"></i>
+                                    Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="alta-cliente.html"><i class="bi bi-person-add"></i> Alta </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="clientes.html"><i class="bi bi-people"></i> Clientes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="prestamos.html"><i class="bi bi-currency-dollar"></i>
+                                    Préstamos</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input
+                                class="form-control me-2 d-inline-flex focus-ring focus-ring-secondary py-1 px-2 text-decoration-none border rounded-2"
+                                type="search" placeholder="Buscar cliente..." aria-label="Buscar cliente...">
+                            <button class="btn btn-outline-dark" type="submit"><i class="bi bi-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="card mt-4 mb-3">
+                <div class="card-header">
+                    <h5><i class="bi bi-person-add"></i> Editar Cliente</h5>
+                </div>
+                <div class="card-body">
+
+                    <form id="editarClienteForm" enctype="multipart/form-data">
+                        <input type="hidden" id="clienteId" name="clienteId" value="">
+
+                        <div class="row">
+                            <div class="col-sm mb-2">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="nombreEdit" name="nombre">
+                                        <label for="nombreEdit" class="form-label">Nombre</label>
+                                </div>
+                            </div>
+                            <div class="col-sm mb-2">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="apellidoEdit" name="apellido">
+                                        <label for="apellidoEdit" class="form-label">Apellido</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm mb-2">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="telefonoEdit" name="telefono">
+                                    <label for="telefonoEdit" class="form-label">Teléfono</label>
+                                </div>
+                            </div>
+                            <div class="col-sm mb-2">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="emailEdit" name="email">
+                                        <label for="emailEdit" class="form-label">Email</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm mb-2">
+                                <div class="form-floating">
+
+                                    
+                                    <input type="text" class="form-control" id="dniEdit" name="dni">
+                                        <label for="dniEdit" class="form-label">DNI</label>
+                                </div>
+                            </div>
+                            <div class="col-sm mb-3">
+
+                                <i class="bi bi-person-square ms-1"></i> Adjuntar foto
+                                <input type="file" class="form-control form-control-sm" id="fotoEdit" name="fotoEdit" accept="image/*">
+                                <!--<button class="btn btn-secondary btn-lg" type="button" onclick="document.getElementById('adjuntarFoto').click();">
+                                    <i class="bi bi-upload"></i> Subir Foto
+                                </button>-->
+                            </div>
+                        </div>
+                        
+                        <button type="button" class="btn btn-outline-success" onclick="actualizarCliente()"><i class="bi bi-pencil-square"> </i>Actualizar Cliente</button>
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <h6 class="text-center">sɪsᴛᴇᴍᴀ ʀᴇɢɪsᴛʀᴏ ᴅᴇ ᴄʟɪᴇɴᴛᴇs & ᴘʀᴇsᴛᴀᴍᴏs</h6>
+
+
+
+
+    </div>
+
+    <!-- Toast container -->
+    <div id="toast-container" data-bs-theme="dark" class="toast-container position-fixed bottom-0 end-0 p-3"
+        style="z-index: 11;"></div>
+
+    <!-- Bootstrap JavaScript and dependencies -->
+        <script>
+        // editar-cliente.js
+const API_URL_EDITAR_CLIENTE = 'https://hachedev.pythonanywhere.com/clientes/';
+
+function mostrarToast(mensaje, tipo) {
+    // Obtener el contenedor de toasts
+    const toastContainer = document.getElementById('toast-container');
+
+    // Crear el elemento del toast
+    const toast = document.createElement('div');
+    toast.classList.add('toast', `bg-${tipo}`, 'text-white');
+    toast.setAttribute('role', 'alert');
+    toast.setAttribute('aria-live', 'assertive');
+    toast.setAttribute('aria-atomic', 'true');
+
+    // Crear el contenido del toast
+    toast.innerHTML = `
+        <div class="toast-header">
+            <strong class="me-auto">Mensaje</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+        </div>
+        <div class="toast-body">
+            ${mensaje}
+        </div>
+    `;
+
+    // Agregar el toast al contenedor
+    toastContainer.appendChild(toast);
+
+    // Crear un objeto Bootstrap Toast a partir del elemento
+    const bootstrapToast = new bootstrap.Toast(toast);
+
+    // Mostrar el toast
+    bootstrapToast.show();
+}
+
+function actualizarCliente() {
+    const clienteId = document.getElementById('clienteId').value;
+    const formData = new FormData(document.getElementById('editarClienteForm'));
+
+    fetch(API_URL_EDITAR_CLIENTE + clienteId, {
+        method: 'PUT',
+        body: formData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error al actualizar el cliente');
+        }
+        return response.json();
+    })
+    .then(data => {
+        mostrarToast('Cliente actualizado correctamente', 'success');
+
+        // Esperar 5 segundos antes de redirigir
+        setTimeout(() => {
+            window.location.href = 'clientes.html';
+        }, 1500);
+    })
+    .catch(error => {
+        console.error('Error al actualizar cliente:', error);
+        // Mostrar toast de error
+        mostrarToast('Error al actualizar cliente', 'danger');
+    });
+}
+
+// Cargar datos del cliente para editar
+function cargarDatosCliente(clienteId) {
+    fetch(API_URL_EDITAR_CLIENTE + clienteId)
+        .then(response => response.json())
+        .then(cliente => {
+            document.getElementById('clienteId').value = cliente.id;
+            document.getElementById('nombreEdit').value = cliente.Nombre;
+            document.getElementById('apellidoEdit').value = cliente.Apellido;
+            document.getElementById('dniEdit').value = cliente.DNI;
+            document.getElementById('telefonoEdit').value = cliente.Telefono;
+            document.getElementById('emailEdit').value = cliente.Email;
+        })
+        .catch(error => {
+            console.error('Error al cargar datos del cliente:', error);
+            alert('Error al cargar datos del cliente');
+        });
+}
+
+// Obtener el ID del cliente de la URL (ej. editar-cliente.html?id=1)
+const urlParams = new URLSearchParams(window.location.search);
+const clienteId = urlParams.get('id');
+
+if (clienteId) {
+    cargarDatosCliente(clienteId);
+}
+
+
+    </script>
+    </script>
+
+</body>
+
+</html>

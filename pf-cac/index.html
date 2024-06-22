@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Incluir jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Incluir html2canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <title>PlataFácil - Clientes & Préstamos</title>
+    <style>
+        body {
+
+            background: url('img/bg.png') center center #212529;
+            background-size: cover;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container-sm {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(var(--acrylic-blur, 10px));
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 1px 19px 21px -9px rgba(0, 0, 0, 0.50);
+            -webkit-box-shadow: 1px 19px 21px -9px rgba(0, 0, 0, 0.50);
+            -moz-box-shadow: 1px 19px 21px -9px rgba(0, 0, 0, 0.50);
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(var(--acrylic-blur, 0px));
+            margin: 0px auto;
+            width: 100%;
+        }
+
+
+        .navbar-brand {
+            font-size: 2em;
+        }
+
+        td,
+        th {
+            white-space: nowrap;
+            /* Impide el quiebre de línea */
+            word-break: break-word;
+            /* Permite el quiebre de palabra */
+        }
+
+        /*.round_table {
+            border-collapse: separate;
+            border: solid #BABABA 1px;
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 5px;
+        }*/
+    </style>
+</head>
+
+<body>
+    <div class="container-sm">
+        <div class="content-sm">
+            <nav class="navbar navbar-expand-lg" style="border-bottom: 1px solid rgba(255, 255, 255, 0.3);">
+                <div class="container-fluid">
+                    <a class="navbar-brand pt-0" href="#">
+                        <span class="badge text-bg-dark"> <i class="bi bi-piggy-bank-fill"></i> PlataFácil
+                        </span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html"><i
+                                        class="bi bi-house"></i>
+                                    Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="alta-cliente.html"><i class="bi bi-person-add"></i> Alta</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="clientes.html"><i class="bi bi-people"></i> Clientes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="prestamos.html"><i class="bi bi-currency-dollar"></i>
+                                    Préstamos</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input
+                                class="form-control me-2 d-inline-flex focus-ring focus-ring-secondary py-1 px-2 text-decoration-none border rounded-2"
+                                type="search" placeholder="Buscar cliente..." aria-label="Buscar cliente...">
+                            <button class="btn btn-outline-dark" type="submit"><i class="bi bi-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="row g-3 mt-2">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="bi bi-people"></i> Clientes
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">Total clientes:</h6>
+                            <p class="card-text" id="total-clientes"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="bi bi-currency-dollar"></i> Préstamos
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">Total prestado:</h6>
+                            <p class="card-text" id="total-prestado"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="bi bi-info-square"></i> Activos
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title" id="">Total activos:</h6>
+                            <p class="card-text" id="total-activos"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <div class="card mt-4 mb-3">
+                <div class="card-header">
+                    <h5><i class="bi bi-clipboard-data"></i> Detalles de Préstamos</h5>
+                </div>
+                <div class="card-body table-responsive">
+                    <table class="table table-dark table-hover table-striped" id="prestamos-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col"><i class="bi bi-person"></i> Cliente</th>
+                                <th scope="col"><i class="bi bi-currency-dollar"></i> Monto</th>
+                                <th scope="col"><i class="bi bi-calendar-event"></i> Fecha de inicio</th>
+                                <th scope="col"><i class="bi bi-calendar-x"></i> Fecha de Vcto.</th>
+                                <th scope="col"><i class="bi bi-info-circle"></i> Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <a href="#" id="export-pdf" class="btn btn-outline-secondary btn-sm"><i
+                            class="bi bi-file-earmark-pdf"></i> Descargar</a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- Script JavaScript para manejar la exportación a PDF y obtener datos desde la API -->
+        <script>
+            const API_URL_CLIENTES = 'https://hachedev.pythonanywhere.com/clientes';  // Cambia el puerto si es diferente
+            const API_URL_PRESTAMOS = 'https://hachedev.pythonanywhere.com/prestamos';  // Cambia el puerto si es diferente
+
+            // Función para obtener totales de clientes y préstamos
+            function obtenerTotales() {
+                // Obtener clientes
+                fetch(API_URL_CLIENTES)
+                    .then(response => response.json())
+                    .then(clientes => {
+                        // Total de clientes
+                        const totalClientes = clientes.length;
+                        document.getElementById('total-clientes').innerText = `${totalClientes}`;
+
+                        // Obtener préstamos
+                        fetch(API_URL_PRESTAMOS)
+                            .then(response => response.json())
+                            .then(prestamos => {
+                                // Filtrar préstamos activos y calcular el total prestado
+                                let totalActivos = 0;
+                                let totalPrestado = 0;
+
+                                prestamos.forEach(prestamo => {
+                                    totalPrestado += parseFloat(prestamo.Monto); // Sumar el monto del préstamo
+                                    if (prestamo.Estado === 'Activo') {
+                                        totalActivos++;
+                                    }
+                                });
+
+                                document.getElementById('total-activos').innerText = `${totalActivos}`;
+                                document.getElementById('total-prestado').innerText = `$${totalPrestado.toFixed(2)}`;
+                            })
+                            .catch(error => {
+                                console.error('Error al obtener préstamos:', error);
+                                document.getElementById('total-activos').innerText = 'Error al cargar';
+                                document.getElementById('total-prestado').innerText = 'Error al cargar';
+                            });
+                    })
+                    .catch(error => {
+                        console.error('Error al obtener clientes:', error);
+                        document.getElementById('total-clientes').innerText = 'Error al cargar';
+                    });
+            }
+
+            // Llamar a la función para obtener totales
+            obtenerTotales();
+
+            // Función para obtener el nombre completo de un cliente
+            function obtenerNombreCompleto(clienteId) {
+                return fetch(API_URL_CLIENTES + `/${clienteId}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Error al obtener el cliente');
+                        }
+                        return response.json();
+                    })
+                    .then(cliente => `${cliente.Nombre} ${cliente.Apellido}`)
+                    .catch(error => {
+                        console.error(`Error al obtener el cliente con ID ${clienteId}:`, error);
+                        return 'Cliente Desconocido';
+                    });
+            }
+
+            // Función para obtener el badge de Bootstrap según el estado del préstamo
+            function obtenerBadgeEstado(estado) {
+                switch (estado) {
+                    case 'Activo':
+                        return '<span class="badge bg-primary">Activo</span>';
+                    case 'Pagado':
+                        return '<span class="badge bg-success">Pagado</span>';
+                    case 'Vencido':
+                        return '<span class="badge bg-danger">Vencido</span>';
+                    default:
+                        return '<span class="badge bg-secondary">Desconocido</span>';
+                }
+            }
+
+
+
+            // Función para exportar la tabla a PDF en orientación apaisada
+            function exportarTablaAPDF() {
+                const { jsPDF } = window.jspdf; // Obtener la clase jsPDF del módulo jspdf
+                const doc = new jsPDF('landscape'); // Crear un nuevo documento PDF en orientación apaisada
+
+                // Añadir título
+                doc.setFontSize(18);
+                doc.text("Detalles de Clientes", doc.internal.pageSize.getWidth() / 2, 20, { align: 'center' });
+
+                // Configurar opciones para la tabla
+                const options = {
+                    background: 'white', // Fondo blanco para la imagen de la tabla
+                    scale: 3 // Escalar la imagen para mejorar la calidad
+                };
+
+                // Seleccionar la tabla a exportar (en este caso, la tabla con id 'prestamos-table')
+                const tabla = document.getElementById('prestamos-table');
+
+                // Usar html2canvas para convertir la tabla a una imagen y luego añadir al documento PDF
+                html2canvas(tabla, options).then(canvas => {
+                    const imgData = canvas.toDataURL('image/png'); // Obtener datos de la imagen en formato base64
+                    const imgWidth = doc.internal.pageSize.getWidth(); // Ancho de la imagen
+                    const imgHeight = (canvas.height * imgWidth) / canvas.width; // Altura de la imagen basada en el ancho
+                    doc.addImage(imgData, 'PNG', 10, 30, imgWidth - 20, imgHeight); // Añadir la imagen al documento PDF
+                    doc.save('detalle_clientes.pdf'); // Descargar el PDF con nombre 'detalle_clientes.pdf'
+                });
+            }
+
+            // Escuchar clic en el enlace de exportar PDF
+            document.getElementById('export-pdf').addEventListener('click', function (event) {
+                event.preventDefault(); // Prevenir el comportamiento por defecto del enlace
+                exportarTablaAPDF(); // Llamar a la función para exportar la tabla a PDF
+            });
+
+            // Obtener y mostrar préstamos
+            fetch(API_URL_PRESTAMOS)
+                .then(response => response.json())
+                .then(prestamos => {
+                    const prestamosTable = document.getElementById('prestamos-table').getElementsByTagName('tbody')[0];
+
+                    // Iterar sobre cada préstamo
+                    prestamos.forEach(prestamo => {
+                        // Obtener nombre completo del cliente y añadir la fila a la tabla
+                        obtenerNombreCompleto(prestamo.cliente_id)
+                            .then(nombreCompleto => {
+                                const row = prestamosTable.insertRow();
+                                row.insertCell(0).innerText = prestamo.id; // ID del préstamo
+                                row.insertCell(1).innerText = nombreCompleto; // Nombre completo del cliente
+                                row.insertCell(2).innerText = prestamo.Monto; // Monto del préstamo
+                                row.insertCell(3).innerText = formatearFecha(prestamo.Fecha_inicio); // Fecha de inicio en formato DD-MM-AAAA
+                                row.insertCell(4).innerText = formatearFecha(prestamo.Fecha_vcto); // Fecha de vencimiento en formato DD-MM-AAAA
+                                // Agregar badge de Bootstrap para el estado del préstamo
+                                row.insertCell(5).innerHTML = obtenerBadgeEstado(prestamo.Estado);
+                            })
+                            .catch(error => {
+                                console.error(`Error al obtener el nombre completo del cliente para el préstamo ${prestamo.id}:`, error);
+                            });
+                    });
+                })
+                .catch(error => {
+                    console.error('Error al obtener préstamos:', error);
+                });
+
+// Función para formatear la fecha en DD-MM-YYYY
+function formatearFecha(fecha) {
+    // Crear un objeto Date desde la cadena en formato "YYYY-MM-DD"
+    const date = new Date(fecha);
+
+    // Verificar si la fecha es inválida
+    if (isNaN(date.getTime())) {
+        return 'Fecha no válida';
+    }
+
+    // Formatear la fecha en "DD-MM-YYYY"
+    const dia = String(date.getUTCDate()).padStart(2, '0');
+    const mes = String(date.getUTCMonth() + 1).padStart(2, '0');
+    const año = date.getUTCFullYear();
+
+    return `${dia}/${mes}/${año}`;
+}
+        </script>
+
+
+
+
+
+
+        <h6 class="text-center">sɪsᴛᴇᴍᴀ ʀᴇɢɪsᴛʀᴏ ᴅᴇ ᴄʟɪᴇɴᴛᴇs & ᴘʀᴇsᴛᴀᴍᴏs</h6>
+
+
+    </div>
+
+
+
+</body>
+
+</html>
