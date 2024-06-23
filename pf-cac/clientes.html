@@ -290,13 +290,13 @@
                     const cellAcciones = row.insertCell(7);
                     const editarBtn = document.createElement('button');
                     editarBtn.classList.add('btn', 'btn-sm', 'btn-outline-success', 'me-2');
-                    editarBtn.innerHTML = '<i class="bi bi-pencil-square"></i> Editar';
+                    editarBtn.innerHTML = '<i class="bi bi-pencil-square"></i> ';
                     editarBtn.addEventListener('click', () => window.location.href = `editar-cliente.html?id=${cliente.id}`);
                     cellAcciones.appendChild(editarBtn);
 
                     const borrarBtn = document.createElement('button');
                     borrarBtn.classList.add('btn','btn-sm', 'btn-outline-danger');
-                    borrarBtn.innerHTML = '<i class="bi bi-trash"></i> Borrar';
+                    borrarBtn.innerHTML = '<i class="bi bi-trash"></i> ';
                     borrarBtn.addEventListener('click', () => borrarCliente(cliente.id));
                     cellAcciones.appendChild(borrarBtn);
                 });
