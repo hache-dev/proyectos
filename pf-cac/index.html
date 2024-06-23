@@ -318,32 +318,44 @@ obtenerTotales();
 
 
             // Función para exportar la tabla a PDF en orientación apaisada
-            function exportarTablaAPDF() {
-                const { jsPDF } = window.jspdf; // Obtener la clase jsPDF del módulo jspdf
-                const doc = new jsPDF('landscape'); // Crear un nuevo documento PDF en orientación apaisada
+function exportarTablaAPDF() {
+    const { jsPDF } = window.jspdf; // Obtener la clase jsPDF del módulo jspdf
+    const doc = new jsPDF('landscape'); // Crear un nuevo documento PDF en orientación apaisada
 
-                // Añadir título
-                doc.setFontSize(18);
-                doc.text("Detalles de Clientes", doc.internal.pageSize.getWidth() / 2, 20, { align: 'center' });
+    // Añadir título
+    doc.setFontSize(18);
+    doc.text("Detalles de Clientes", doc.internal.pageSize.getWidth() / 2, 20, { align: 'center' });
 
-                // Configurar opciones para la tabla
-                const options = {
-                    background: 'white', // Fondo blanco para la imagen de la tabla
-                    scale: 3 // Escalar la imagen para mejorar la calidad
-                };
+    // Obtener totales de clientes y préstamos
+    const totalClientes = document.getElementById('total-clientes').innerText;
+    const totalPrestado = document.getElementById('total-prestado').innerText;
+    const totalActivos = document.getElementById('total-activos').innerText;
+    const totalVencidos = document.getElementById('total-vencidos').innerText;
 
-                // Seleccionar la tabla a exportar (en este caso, la tabla con id 'prestamos-table')
-                const tabla = document.getElementById('prestamos-table');
+// Agregar totales al documento PDF
+doc.setFontSize(12);
+    doc.text(`Total de Clientes: ${totalClientes} - Total Activos: ${totalActivos} - Total Vencidos: ${totalVencidos} - Total Prestado: ${totalPrestado}`, 10, 30);
 
-                // Usar html2canvas para convertir la tabla a una imagen y luego añadir al documento PDF
-                html2canvas(tabla, options).then(canvas => {
-                    const imgData = canvas.toDataURL('image/png'); // Obtener datos de la imagen en formato base64
-                    const imgWidth = doc.internal.pageSize.getWidth(); // Ancho de la imagen
-                    const imgHeight = (canvas.height * imgWidth) / canvas.width; // Altura de la imagen basada en el ancho
-                    doc.addImage(imgData, 'PNG', 10, 30, imgWidth - 20, imgHeight); // Añadir la imagen al documento PDF
-                    doc.save('detalle_clientes.pdf'); // Descargar el PDF con nombre 'detalle_clientes.pdf'
-                });
-            }
+    // Configurar opciones para la tabla
+    const options = {
+        background: 'white', // Fondo blanco para la imagen de la tabla
+        scale: 3 // Escalar la imagen para mejorar la calidad
+    };
+
+    // Seleccionar la tabla a exportar (en este caso, la tabla con id 'prestamos-table')
+    const tabla = document.getElementById('prestamos-table');
+
+    // Usar html2canvas para convertir la tabla a una imagen y luego añadir al documento PDF
+    html2canvas(tabla, options).then(canvas => {
+        const imgData = canvas.toDataURL('image/png'); // Obtener datos de la imagen en formato base64
+        const imgWidth = doc.internal.pageSize.getWidth(); // Ancho de la imagen
+        const imgHeight = (canvas.height * imgWidth) / canvas.width; // Altura de la imagen basada en el ancho
+        doc.addImage(imgData, 'PNG', 10, 35, imgWidth - 20, imgHeight); // Añadir la imagen al documento PDF
+
+        doc.save('detalle_clientes.pdf'); // Descargar el PDF con nombre 'detalle_clientes.pdf'
+    });
+}
+
 
             // Escuchar clic en el enlace de exportar PDF
             document.getElementById('export-pdf').addEventListener('click', function (event) {
