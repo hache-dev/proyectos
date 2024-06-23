@@ -150,26 +150,45 @@
                     </div>
                 </div>
                 <div class="col-sm">
-                    <div class="card">
+                    <div class="card ">
                         <div class="card-header">
-                            <i class="bi bi-info-square"></i> Pagados
+                            <i class="bi bi-calendar-check"></i> Pagados
                         </div>
-                        <div class="card-body">
+                        <div class="card-body ">
                             <h6 class="card-title" id="">Total Pagados:</h6>
                             <p class="card-text" id="total-pagados"></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm">
+                    
                     <div class="card">
                         <div class="card-header">
-                            <i class="bi bi-info-square"></i> Vencidos
+                            <i class="bi bi-calendar-x"></i> Vencidos
                         </div>
                         <div class="card-body">
                             <h6 class="card-title" id="">Total vencidos:</h6>
                             <p class="card-text" id="total-vencidos"></p>
                         </div>
                     </div>
+                    
+                    <!--
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center ">
+                            <span><i class="bi bi-calendar-x"></i> Vencidos</span>
+                            <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="collapse" data-bs-target="#cardBodyVencidos" aria-expanded="true" aria-controls="cardBodyVencidos">
+                                <i class="bi bi-dash" id="collapseIcon"></i>
+                            </button>
+                        </div>
+                        <div class="collapse show" id="cardBodyVencidos">
+                            <div class="card-body">
+                                <h6 class="card-title">Total vencidos:</h6>
+                                <p class="card-text" id="total-vencidos"></p>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+
                 </div>
             </div>
 
@@ -178,7 +197,7 @@
                 <div class="card-header">
                     <h5><i class="bi bi-clipboard-data"></i> Detalles de Préstamos</h5>
                 </div>
-                
+                         
                 
                 <div class="card-body table-responsive">
                     <table class="table table-dark table-hover table-striped" id="prestamos-table">
@@ -205,6 +224,8 @@
 
         </div>
 
+
+        
         <!-- Script JavaScript para manejar la exportación a PDF y obtener datos desde la API -->
         <script>
             const API_URL_CLIENTES = 'https://hachedev.pythonanywhere.com/clientes';  // Cambia el puerto si es diferente
