@@ -74,8 +74,8 @@
         <div class="content-sm">
             <nav class="navbar navbar-expand-lg" style="border-bottom: 1px solid rgba(255, 255, 255, 0.3);">
                 <div class="container-fluid">
-                    <a class="navbar-brand pt-0" href="#">
-                        <span class="badge text-bg-dark"> <i class="bi bi-piggy-bank-fill"></i> PlataFácil
+                    <a class="navbar-brand pt-0" href="index.html">
+                        <span class="badge text-bg-dark"> <i class="bi bi-piggy-bank"></i> PlataFácil
                         </span></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -90,28 +90,34 @@
                                     Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="alta-cliente.html"><i class="bi bi-person-add"></i> Alta</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="clientes.html"><i class="bi bi-people"></i> Clientes</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="prestamos.html"><i class="bi bi-currency-dollar"></i>
                                     Préstamos</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="alta-cliente.html"><i class="bi bi-person-add"></i> Alta</a>
+                            </li>
                         </ul>
                         <form class="d-flex" role="search">
+                            <!--
                             <input
                                 class="form-control me-2 d-inline-flex focus-ring focus-ring-secondary py-1 px-2 text-decoration-none border rounded-2"
-                                type="search" placeholder="Buscar cliente..." aria-label="Buscar cliente...">
-                            <button class="btn btn-outline-dark" type="submit"><i class="bi bi-search"></i></button>
+                                type="search" placeholder="Buscar cliente..." id="buscarInputx" aria-label="Buscar cliente...">
+                            <button class="btn btn-outline-dark disabled" type="submit"><i class="bi bi-search"></i></button>
+                            -->
+                            <div class="input-group mb-3">
+                                <input type="text" data-bs-theme="dark" id="buscarInput" class="form-control focus-ring focus-ring-secondary py-1 px-2" placeholder="Buscar Cliente..." aria-label="Buscar cliente..." aria-describedby="button-addon2">
+                                <button class="btn btn-outline-dark disabled" type="button" id="button-addon2"><i class="bi bi-person"></i></button>
+                              </div>
                         </form>
                     </div>
                 </div>
             </nav>
 
-            <div class="row g-3 mt-2">
-                <div class="col-sm-4">
+            <div class="row g-2 mt-2">
+                <div class="col-sm">
                     <div class="card">
                         <div class="card-header">
                             <i class="bi bi-people"></i> Clientes
@@ -122,7 +128,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm">
                     <div class="card">
                         <div class="card-header">
                             <i class="bi bi-currency-dollar"></i> Préstamos
@@ -133,7 +139,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm">
                     <div class="card">
                         <div class="card-header">
                             <i class="bi bi-info-square"></i> Activos
@@ -143,6 +149,47 @@
                             <p class="card-text" id="total-activos"></p>
                         </div>
                     </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card ">
+                        <div class="card-header">
+                            <i class="bi bi-calendar-check"></i> Pagados
+                        </div>
+                        <div class="card-body ">
+                            <h6 class="card-title" id="">Total Pagados:</h6>
+                            <p class="card-text" id="total-pagados"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="bi bi-calendar-x"></i>  Vencidos
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title" id="" >Total vencidos:</h6>
+                            <p class="card-text" id="total-vencidos"></p>
+                        </div>
+                    </div>
+                    
+                    <!--
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center ">
+                            <span><i class="bi bi-calendar-x"></i> Vencidos</span>
+                            <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="collapse" data-bs-target="#cardBodyVencidos" aria-expanded="true" aria-controls="cardBodyVencidos">
+                                <i class="bi bi-dash" id="collapseIcon"></i>
+                            </button>
+                        </div>
+                        <div class="collapse show" id="cardBodyVencidos">
+                            <div class="card-body">
+                                <h6 class="card-title">Total vencidos:</h6>
+                                <p class="card-text" id="total-vencidos"></p>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+
                 </div>
             </div>
 
@@ -159,7 +206,7 @@
                                 <th><i class="bi bi-person"></i> Nombre</th>
                                 <th><i class="bi bi-person"></i> Apellido</th>
                                 <th><i class="bi bi-person-vcard"></i> DNI</th>
-                                <th><i class="bi bi-telephone"></i> Teléfono</th>
+                                <th><i class="bi bi-telephone"></i> Tel</th>
                                 <th><i class="bi bi-envelope"></i> Email</th>
                                 <th><i class="bi bi-person-square"></i> Foto</th>
                                 <th><i class="bi bi-pencil-square"></i> Accion</th>
@@ -312,51 +359,93 @@
         <script>
     const API_URL_CLIENTES = 'https://hachedev.pythonanywhere.com/clientes';  // Cambia el puerto si es diferente
     const API_URL_PRESTAMOS = 'https://hachedev.pythonanywhere.com/prestamos';  // Cambia el puerto si es diferente
-            // Función para obtener totales de clientes y préstamos
-            function obtenerTotales() {
-                // Obtener clientes
-                fetch(API_URL_CLIENTES)
-                    .then(response => response.json())
-                    .then(clientes => {
-                        // Total de clientes
-                        const totalClientes = clientes.length;
-                        document.getElementById('total-clientes').innerText = `${totalClientes}`;
+ // Función para obtener totales de clientes y préstamos
+ function obtenerTotales() {
+    // Obtener clientes
+    fetch(API_URL_CLIENTES)
+        .then(response => response.json())
+        .then(clientes => {
+            // Total de clientes
+            const totalClientes = clientes.length;
+            document.getElementById('total-clientes').innerText = `${totalClientes}`;
 
-                        // Obtener préstamos
-                        fetch(API_URL_PRESTAMOS)
-                            .then(response => response.json())
-                            .then(prestamos => {
-                                // Filtrar préstamos activos y calcular el total prestado
-                                let totalActivos = 0;
-                                let totalPrestado = 0;
+            // Obtener préstamos
+            fetch(API_URL_PRESTAMOS)
+                .then(response => response.json())
+                .then(prestamos => {
+                    // Variables para contar préstamos por estado y el total prestado
+                    let totalActivos = 0;
+                    let totalPagados = 0;
+                    let totalVencidos = 0;
+                    let totalPrestado = 0;
 
-                                prestamos.forEach(prestamo => {
-                                    totalPrestado += parseFloat(prestamo.Monto); // Sumar el monto del préstamo
-                                    if (prestamo.Estado === 'Activo') {
-                                        totalActivos++;
-                                    }
-                                });
-
-                                document.getElementById('total-activos').innerText = `${totalActivos}`;
-                                document.getElementById('total-prestado').innerText = `$${totalPrestado.toFixed(2)}`;
-                            })
-                            .catch(error => {
-                                console.error('Error al obtener préstamos:', error);
-                                document.getElementById('total-activos').innerText = 'Error al cargar';
-                                document.getElementById('total-prestado').innerText = 'Error al cargar';
-                            });
-                    })
-                    .catch(error => {
-                        console.error('Error al obtener clientes:', error);
-                        document.getElementById('total-clientes').innerText = 'Error al cargar';
+                    prestamos.forEach(prestamo => {
+                        totalPrestado += parseFloat(prestamo.Monto); // Sumar el monto del préstamo
+                        if (prestamo.Estado === 'Activo') {
+                            totalActivos++;
+                        } else if (prestamo.Estado === 'Pagado') {
+                            totalPagados++;
+                        } else if (prestamo.Estado === 'Vencido') {
+                            totalVencidos++;
+                        }
                     });
-            }
 
-            // Llamar a la función para obtener totales
-            obtenerTotales();
+                    // Actualizar el DOM con los totales calculados
+                    document.getElementById('total-activos').innerText = `${totalActivos}`;
+                    document.getElementById('total-pagados').innerText = `${totalPagados}`;
+                    document.getElementById('total-vencidos').innerText = `${totalVencidos}`;
+                    document.getElementById('total-prestado').innerText = `$${totalPrestado.toFixed(2)}`;
+                })
+                .catch(error => {
+                    console.error('Error al obtener préstamos:', error);
+                    document.getElementById('total-activos').innerText = 'Error al cargar';
+                    document.getElementById('total-pagados').innerText = 'Error al cargar';
+                    document.getElementById('total-vencidos').innerText = 'Error al cargar';
+                    document.getElementById('total-prestado').innerText = 'Error al cargar';
+                });
+        })
+        .catch(error => {
+            console.error('Error al obtener clientes:', error);
+            document.getElementById('total-clientes').innerText = 'Error al cargar';
+        });
+}
+
+// Llamar a la función para obtener totales
+obtenerTotales();
 
 
         </script>
+
+        
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const buscarInput = document.getElementById('buscarInput');
+        const clientesTable = document.getElementById('clientes-table').getElementsByTagName('tbody')[0];
+
+        // Función para buscar y filtrar filas de la tabla
+        function buscarClientes() {
+            const filtro = buscarInput.value.toLowerCase();
+            const filas = clientesTable.getElementsByTagName('tr');
+
+            for (const fila of filas) {
+                let mostrarFila = false;
+                const celdas = fila.getElementsByTagName('td');
+
+                for (const celda of celdas) {
+                    if (celda.innerText.toLowerCase().includes(filtro)) {
+                        mostrarFila = true;
+                        break;
+                    }
+                }
+
+                fila.style.display = mostrarFila ? '' : 'none';
+            }
+        }
+
+        // Añadir evento para buscar mientras el usuario escribe
+        buscarInput.addEventListener('input', buscarClientes);
+    });
+</script>
 
         <h6 class="text-center">sɪsᴛᴇᴍᴀ ʀᴇɢɪsᴛʀᴏ ᴅᴇ ᴄʟɪᴇɴᴛᴇs & ᴘʀᴇsᴛᴀᴍᴏs</h6>
 
