@@ -273,7 +273,7 @@
 
                     // Mostrar miniatura de la foto
                     const img = document.createElement('img');
-                    img.src = `https://www.pythonanywhere.com/user/hachedev/files/${cliente.Foto}`;
+                    img.src = `${cliente.Foto}`;
                     img.alt = 'Miniatura de foto';
                     img.style.maxWidth = '32px';
                     img.style.maxHeight = '32px';
@@ -314,7 +314,7 @@
 
         // Configurar la imagen y la descripción en el modal
         const imgModal = document.getElementById('fotoModalImg');
-        imgModal.src = `https://www.pythonanywhere.com/user/hachedev/files/${cliente.Foto}`;
+        imgModal.src = `${cliente.Foto}`;
         imgModal.alt = `${cliente.Nombre} ${cliente.Apellido}`;
         imgModal.style.maxWidth = '50%';
 
