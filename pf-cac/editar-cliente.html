@@ -81,7 +81,7 @@
 </head>
 
 <body>
-    <div class="container-sm mt-4">
+    <div class="container-sm mt-4 mb-4">
         <div class="content-sm">
             <nav class="navbar navbar-expand-lg" style="border-bottom: 1px solid rgba(255, 255, 255, 0.3);">
                 <div class="container-fluid">
@@ -167,7 +167,7 @@
                                 <div class="form-floating">
 
                                     
-                                    <input type="text" class="form-control" id="dniEdit" name="dni">
+                                    <input type="text" class="form-control" id="dniEdit" name="dni" pattern="^\d{7,8}$" title="Ingrese un número de DNI argentino válido (7 u 8 dígitos).">
                                         <label for="dniEdit" class="form-label">DNI</label>
                                 </div>
                             </div>
