@@ -20,19 +20,19 @@
         body {
 
             background: url('img/bg.png') center center #212529;
-            background-size:auto;
+            background-size: auto;
             font-weight: 500;
             display: flex;
             justify-content: center;
         }
 
         .container-sm {
-            background: rgba( 255, 255, 255, 0.25 );
+            background: rgba(255, 255, 255, 0.25);
             box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur( 0px );
-            -webkit-backdrop-filter: blur( 0px );
+            backdrop-filter: blur(0px);
+            -webkit-backdrop-filter: blur(0px);
             border-radius: 10px;
-            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            border: 1px solid rgba(255, 255, 255, 0.18);
             /*margin: 20px;*/
             /*padding: 10px;*/
         }
@@ -107,78 +107,98 @@
                             <button class="btn btn-outline-dark disabled" type="submit"><i class="bi bi-search"></i></button>
                             -->
                             <div class="input-group mb-3">
-                                <input type="text" data-bs-theme="dark" id="buscarInput" class="form-control focus-ring focus-ring-secondary py-1 px-2" placeholder="Buscar Cliente..." aria-label="Buscar cliente..." aria-describedby="button-addon2">
-                                <button class="btn btn-outline-dark disabled" type="button" id="button-addon2"><i class="bi bi-person"></i></button>
-                              </div>
+                                <input type="text" data-bs-theme="dark" id="buscarInput"
+                                    class="form-control focus-ring focus-ring-secondary py-1 px-2"
+                                    placeholder="Buscar Cliente..." aria-label="Buscar cliente..."
+                                    aria-describedby="button-addon2">
+                                <button class="btn btn-outline-dark disabled" type="button" id="button-addon2"><i
+                                        class="bi bi-person"></i></button>
+                            </div>
                         </form>
                     </div>
                 </div>
             </nav>
 
             <div class="row g-2 mt-2">
-                <div class="col-sm">
+                <div class="col-xl">
+
                     <div class="card">
-                        <div class="card-header">
-                            <i class="bi bi-people"></i> Clientes
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-people"></i> Clientes</span>
+                            <button class="collapse-toggle btn btn-sm" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#cardBodyClientes" aria-expanded="true"
+                                aria-controls="cardBodyClientes">
+                                <i class="bi bi-dash" id="collapseIconClientes"></i>
+                            </button>
                         </div>
-                        <div class="card-body">
-                            <h6 class="card-title">Total clientes:</h6>
-                            <p class="card-text" id="total-clientes"></p>
+                        <div class="collapse show" id="cardBodyClientes">
+                            <div class="card-body">
+                                <h6 class="card-title">Total clientes:</h6>
+                                <p class="card-text" id="total-clientes"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm">
                     <div class="card">
-                        <div class="card-header">
-                            <i class="bi bi-currency-dollar"></i> Préstamos
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-currency-dollar"></i> Préstamos</span>
+                            <button class="collapse-toggle btn btn-sm" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#cardBodyPrestamos" aria-expanded="true"
+                                aria-controls="cardBodyPrestamos">
+                                <i class="bi bi-dash" id="collapseIconPrestamos"></i>
+                            </button>
                         </div>
-                        <div class="card-body">
-                            <h6 class="card-title">Total prestado:</h6>
-                            <p class="card-text" id="total-prestado"></p>
+                        <div class="collapse show" id="cardBodyPrestamos">
+                            <div class="card-body">
+                                <h6 class="card-title">Total prestado:</h6>
+                                <p class="card-text" id="total-prestado"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm">
                     <div class="card">
-                        <div class="card-header">
-                            <i class="bi bi-info-square"></i> Activos
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-info-square"></i> Activos</span>
+                            <button class="collapse-toggle btn btn-sm" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#cardBodyActivos" aria-expanded="true" aria-controls="cardBodyActivos">
+                                <i class="bi bi-dash" id="collapseIconActivos"></i>
+                            </button>
                         </div>
-                        <div class="card-body">
-                            <h6 class="card-title" id="">Total activos:</h6>
-                            <p class="card-text" id="total-activos"></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <div class="card ">
-                        <div class="card-header">
-                            <i class="bi bi-calendar-check"></i> Pagados
-                        </div>
-                        <div class="card-body ">
-                            <h6 class="card-title" id="">Total Pagados:</h6>
-                            <p class="card-text" id="total-pagados"></p>
+                        <div class="collapse show" id="cardBodyActivos">
+                            <div class="card-body">
+                                <h6 class="card-title">Total activos:</h6>
+                                <p class="card-text" id="total-activos"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm">
-                    
                     <div class="card">
-                        <div class="card-header">
-                            <i class="bi bi-calendar-x"></i>  Vencidos
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-calendar-check"></i> Pagados</span>
+                            <button class="collapse-toggle btn btn-sm" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#cardBodyPagados" aria-expanded="true" aria-controls="cardBodyPagados">
+                                <i class="bi bi-dash" id="collapseIconPagados"></i>
+                            </button>
                         </div>
-                        <div class="card-body">
-                            <h6 class="card-title" id="" >Total vencidos:</h6>
-                            <p class="card-text" id="total-vencidos"></p>
+                        <div class="collapse show" id="cardBodyPagados">
+                            <div class="card-body">
+                                <h6 class="card-title">Total Pagados:</h6>
+                                <p class="card-text" id="total-pagados"></p>
+                            </div>
                         </div>
                     </div>
-                    
-                    
-                    <!--
+                </div>
+                <div class="col-sm">
                     <div class="card">
-                        <div class="card-header d-flex justify-content-between align-items-center ">
+                        <div class="card-header d-flex justify-content-between align-items-center">
                             <span><i class="bi bi-calendar-x"></i> Vencidos</span>
-                            <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="collapse" data-bs-target="#cardBodyVencidos" aria-expanded="true" aria-controls="cardBodyVencidos">
-                                <i class="bi bi-dash" id="collapseIcon"></i>
+                            <button class="collapse-toggle btn btn-sm" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#cardBodyVencidos" aria-expanded="true"
+                                aria-controls="cardBodyVencidos">
+                                <i class="bi bi-dash" id="collapseIconVencidos"></i>
                             </button>
                         </div>
                         <div class="collapse show" id="cardBodyVencidos">
@@ -188,7 +208,6 @@
                             </div>
                         </div>
                     </div>
-                    -->
 
                 </div>
             </div>
@@ -198,8 +217,22 @@
                 <div class="card-header">
                     <h5><i class="bi bi-clipboard-data"></i> Detalles de Préstamos</h5>
                 </div>
-                         
-                
+                <div class="d-flex col-sm-4 ms-3 mt-3 me-3" role="search">
+                    <!--
+                    <input
+                        class="form-control me-2 d-inline-flex focus-ring focus-ring-secondary py-1 px-2 text-decoration-none border rounded-2"
+                        type="search" placeholder="Buscar cliente..." id="buscarInputx" aria-label="Buscar cliente...">
+                    <button class="btn btn-outline-dark disabled" type="submit"><i class="bi bi-search"></i></button>
+                    -->
+                    <div class="input-group">
+                        <input type="text" data-bs-theme="dark" id="buscarInput1"
+                            class="form-control focus-ring focus-ring-secondary py-1 px-2"
+                            placeholder="Buscar Cliente..." aria-label="Buscar cliente..."
+                            aria-describedby="button-addon2">
+                        <button class="btn btn-outline-dark disabled" type="button" id="button-addon2"><i
+                                class="bi bi-person"></i></button>
+                    </div>
+                </div>
                 <div class="card-body table-responsive">
                     <table class="table table-dark table-hover table-striped" id="prestamos-table">
                         <thead>
@@ -226,65 +259,65 @@
         </div>
 
 
-        
+
         <!-- Script JavaScript para manejar la exportación a PDF y obtener datos desde la API -->
         <script>
             const API_URL_CLIENTES = 'https://hachedev.pythonanywhere.com/clientes';  // Cambia el puerto si es diferente
             const API_URL_PRESTAMOS = 'https://hachedev.pythonanywhere.com/prestamos';  // Cambia el puerto si es diferente
 
- // Función para obtener totales de clientes y préstamos
-function obtenerTotales() {
-    // Obtener clientes
-    fetch(API_URL_CLIENTES)
-        .then(response => response.json())
-        .then(clientes => {
-            // Total de clientes
-            const totalClientes = clientes.length;
-            document.getElementById('total-clientes').innerText = `${totalClientes}`;
+            // Función para obtener totales de clientes y préstamos
+            function obtenerTotales() {
+                // Obtener clientes
+                fetch(API_URL_CLIENTES)
+                    .then(response => response.json())
+                    .then(clientes => {
+                        // Total de clientes
+                        const totalClientes = clientes.length;
+                        document.getElementById('total-clientes').innerText = `${totalClientes}`;
 
-            // Obtener préstamos
-            fetch(API_URL_PRESTAMOS)
-                .then(response => response.json())
-                .then(prestamos => {
-                    // Variables para contar préstamos por estado y el total prestado
-                    let totalActivos = 0;
-                    let totalPagados = 0;
-                    let totalVencidos = 0;
-                    let totalPrestado = 0;
+                        // Obtener préstamos
+                        fetch(API_URL_PRESTAMOS)
+                            .then(response => response.json())
+                            .then(prestamos => {
+                                // Variables para contar préstamos por estado y el total prestado
+                                let totalActivos = 0;
+                                let totalPagados = 0;
+                                let totalVencidos = 0;
+                                let totalPrestado = 0;
 
-                    prestamos.forEach(prestamo => {
-                        totalPrestado += parseFloat(prestamo.Monto); // Sumar el monto del préstamo
-                        if (prestamo.Estado === 'Activo') {
-                            totalActivos++;
-                        } else if (prestamo.Estado === 'Pagado') {
-                            totalPagados++;
-                        } else if (prestamo.Estado === 'Vencido') {
-                            totalVencidos++;
-                        }
+                                prestamos.forEach(prestamo => {
+                                    totalPrestado += parseFloat(prestamo.Monto); // Sumar el monto del préstamo
+                                    if (prestamo.Estado === 'Activo') {
+                                        totalActivos++;
+                                    } else if (prestamo.Estado === 'Pagado') {
+                                        totalPagados++;
+                                    } else if (prestamo.Estado === 'Vencido') {
+                                        totalVencidos++;
+                                    }
+                                });
+
+                                // Actualizar el DOM con los totales calculados
+                                document.getElementById('total-activos').innerText = `${totalActivos}`;
+                                document.getElementById('total-pagados').innerText = `${totalPagados}`;
+                                document.getElementById('total-vencidos').innerText = `${totalVencidos}`;
+                                document.getElementById('total-prestado').innerText = `$${totalPrestado.toFixed(2)}`;
+                            })
+                            .catch(error => {
+                                console.error('Error al obtener préstamos:', error);
+                                document.getElementById('total-activos').innerText = 'Error al cargar';
+                                document.getElementById('total-pagados').innerText = 'Error al cargar';
+                                document.getElementById('total-vencidos').innerText = 'Error al cargar';
+                                document.getElementById('total-prestado').innerText = 'Error al cargar';
+                            });
+                    })
+                    .catch(error => {
+                        console.error('Error al obtener clientes:', error);
+                        document.getElementById('total-clientes').innerText = 'Error al cargar';
                     });
+            }
 
-                    // Actualizar el DOM con los totales calculados
-                    document.getElementById('total-activos').innerText = `${totalActivos}`;
-                    document.getElementById('total-pagados').innerText = `${totalPagados}`;
-                    document.getElementById('total-vencidos').innerText = `${totalVencidos}`;
-                    document.getElementById('total-prestado').innerText = `$${totalPrestado.toFixed(2)}`;
-                })
-                .catch(error => {
-                    console.error('Error al obtener préstamos:', error);
-                    document.getElementById('total-activos').innerText = 'Error al cargar';
-                    document.getElementById('total-pagados').innerText = 'Error al cargar';
-                    document.getElementById('total-vencidos').innerText = 'Error al cargar';
-                    document.getElementById('total-prestado').innerText = 'Error al cargar';
-                });
-        })
-        .catch(error => {
-            console.error('Error al obtener clientes:', error);
-            document.getElementById('total-clientes').innerText = 'Error al cargar';
-        });
-}
-
-// Llamar a la función para obtener totales
-obtenerTotales();
+            // Llamar a la función para obtener totales
+            obtenerTotales();
 
             // Función para obtener el nombre completo de un cliente
             function obtenerNombreCompleto(clienteId) {
@@ -319,43 +352,43 @@ obtenerTotales();
 
 
             // Función para exportar la tabla a PDF en orientación apaisada
-function exportarTablaAPDF() {
-    const { jsPDF } = window.jspdf; // Obtener la clase jsPDF del módulo jspdf
-    const doc = new jsPDF('landscape'); // Crear un nuevo documento PDF en orientación apaisada
+            function exportarTablaAPDF() {
+                const { jsPDF } = window.jspdf; // Obtener la clase jsPDF del módulo jspdf
+                const doc = new jsPDF('landscape'); // Crear un nuevo documento PDF en orientación apaisada
 
-    // Añadir título
-    doc.setFontSize(18);
-    doc.text("Detalles de Clientes", doc.internal.pageSize.getWidth() / 2, 20, { align: 'center' });
+                // Añadir título
+                doc.setFontSize(18);
+                doc.text("Detalles de Clientes", doc.internal.pageSize.getWidth() / 2, 20, { align: 'center' });
 
-    // Obtener totales de clientes y préstamos
-    const totalClientes = document.getElementById('total-clientes').innerText;
-    const totalPrestado = document.getElementById('total-prestado').innerText;
-    const totalActivos = document.getElementById('total-activos').innerText;
-    const totalVencidos = document.getElementById('total-vencidos').innerText;
+                // Obtener totales de clientes y préstamos
+                const totalClientes = document.getElementById('total-clientes').innerText;
+                const totalPrestado = document.getElementById('total-prestado').innerText;
+                const totalActivos = document.getElementById('total-activos').innerText;
+                const totalVencidos = document.getElementById('total-vencidos').innerText;
 
-// Agregar totales al documento PDF
-doc.setFontSize(12);
-    doc.text(`Total de Clientes: ${totalClientes} - Total Activos: ${totalActivos} - Total Vencidos: ${totalVencidos} - Total Prestado: ${totalPrestado}`, 10, 30);
+                // Agregar totales al documento PDF
+                doc.setFontSize(12);
+                doc.text(`Total de Clientes: ${totalClientes} - Total Activos: ${totalActivos} - Total Vencidos: ${totalVencidos} - Total Prestado: ${totalPrestado}`, 10, 30);
 
-    // Configurar opciones para la tabla
-    const options = {
-        background: 'white', // Fondo blanco para la imagen de la tabla
-        scale: 3 // Escalar la imagen para mejorar la calidad
-    };
+                // Configurar opciones para la tabla
+                const options = {
+                    background: 'white', // Fondo blanco para la imagen de la tabla
+                    scale: 3 // Escalar la imagen para mejorar la calidad
+                };
 
-    // Seleccionar la tabla a exportar (en este caso, la tabla con id 'prestamos-table')
-    const tabla = document.getElementById('prestamos-table');
+                // Seleccionar la tabla a exportar (en este caso, la tabla con id 'prestamos-table')
+                const tabla = document.getElementById('prestamos-table');
 
-    // Usar html2canvas para convertir la tabla a una imagen y luego añadir al documento PDF
-    html2canvas(tabla, options).then(canvas => {
-        const imgData = canvas.toDataURL('image/png'); // Obtener datos de la imagen en formato base64
-        const imgWidth = doc.internal.pageSize.getWidth(); // Ancho de la imagen
-        const imgHeight = (canvas.height * imgWidth) / canvas.width; // Altura de la imagen basada en el ancho
-        doc.addImage(imgData, 'PNG', 10, 35, imgWidth - 20, imgHeight); // Añadir la imagen al documento PDF
+                // Usar html2canvas para convertir la tabla a una imagen y luego añadir al documento PDF
+                html2canvas(tabla, options).then(canvas => {
+                    const imgData = canvas.toDataURL('image/png'); // Obtener datos de la imagen en formato base64
+                    const imgWidth = doc.internal.pageSize.getWidth(); // Ancho de la imagen
+                    const imgHeight = (canvas.height * imgWidth) / canvas.width; // Altura de la imagen basada en el ancho
+                    doc.addImage(imgData, 'PNG', 10, 35, imgWidth - 20, imgHeight); // Añadir la imagen al documento PDF
 
-        doc.save('detalle_clientes.pdf'); // Descargar el PDF con nombre 'detalle_clientes.pdf'
-    });
-}
+                    doc.save('detalle_clientes.pdf'); // Descargar el PDF con nombre 'detalle_clientes.pdf'
+                });
+            }
 
 
             // Escuchar clic en el enlace de exportar PDF
@@ -393,33 +426,35 @@ doc.setFontSize(12);
                     console.error('Error al obtener préstamos:', error);
                 });
 
-// Función para formatear la fecha en DD-MM-YYYY
-function formatearFecha(fecha) {
-    // Crear un objeto Date desde la cadena en formato "YYYY-MM-DD"
-    const date = new Date(fecha);
+            // Función para formatear la fecha en DD-MM-YYYY
+            function formatearFecha(fecha) {
+                // Crear un objeto Date desde la cadena en formato "YYYY-MM-DD"
+                const date = new Date(fecha);
 
-    // Verificar si la fecha es inválida
-    if (isNaN(date.getTime())) {
-        return 'Fecha no válida';
-    }
+                // Verificar si la fecha es inválida
+                if (isNaN(date.getTime())) {
+                    return 'Fecha no válida';
+                }
 
-    // Formatear la fecha en "DD-MM-YYYY"
-    const dia = String(date.getUTCDate()).padStart(2, '0');
-    const mes = String(date.getUTCMonth() + 1).padStart(2, '0');
-    const año = date.getUTCFullYear();
+                // Formatear la fecha en "DD-MM-YYYY"
+                const dia = String(date.getUTCDate()).padStart(2, '0');
+                const mes = String(date.getUTCMonth() + 1).padStart(2, '0');
+                const año = date.getUTCFullYear();
 
-    return `${dia}/${mes}/${año}`;
-}
+                return `${dia}/${mes}/${año}`;
+            }
         </script>
 
-                <script>
+        <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const buscarInput = document.getElementById('buscarInput');
+                const buscarInput1 = document.getElementById('buscarInput1');
                 const clientesTable = document.getElementById('prestamos-table').getElementsByTagName('tbody')[0];
 
                 // Función para buscar y filtrar filas de la tabla
                 function buscarClientes() {
                     const filtro = buscarInput.value.toLowerCase();
+                    const filtro1 = buscarInput1.value.toLowerCase();
                     const filas = clientesTable.getElementsByTagName('tr');
 
                     for (const fila of filas) {
@@ -427,7 +462,8 @@ function formatearFecha(fecha) {
                         const celdas = fila.getElementsByTagName('td');
 
                         for (const celda of celdas) {
-                            if (celda.innerText.toLowerCase().includes(filtro)) {
+                            const textoCelda = celda.innerText.toLowerCase();
+                            if (textoCelda.includes(filtro) && textoCelda.includes(filtro1)) {
                                 mostrarFila = true;
                                 break;
                             }
@@ -439,7 +475,70 @@ function formatearFecha(fecha) {
 
                 // Añadir evento para buscar mientras el usuario escribe
                 buscarInput.addEventListener('input', buscarClientes);
+                buscarInput1.addEventListener('input', buscarClientes);
             });
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var collapseButtons = document.querySelectorAll('.collapse-toggle');
+                var isSmallScreen = window.innerWidth < 576;
+
+                collapseButtons.forEach(function (button) {
+                    var targetId = button.getAttribute('data-bs-target');
+                    var cardBody = document.querySelector(targetId);
+                    var collapseIcon = button.querySelector('i');
+                    var bootstrapCollapse = new bootstrap.Collapse(cardBody, { toggle: false });
+
+                    // Función para actualizar el icono
+                    function updateIcon(isCollapsed) {
+                        if (isCollapsed) {
+                            collapseIcon.classList.remove('bi-dash');
+                            collapseIcon.classList.add('bi-plus');
+                        } else {
+                            collapseIcon.classList.remove('bi-plus');
+                            collapseIcon.classList.add('bi-dash');
+                        }
+                    }
+
+                    // Inicializar el estado basado en el tamaño de la pantalla
+                    if (isSmallScreen) {
+                        bootstrapCollapse.hide();
+                        updateIcon(true);
+                    } else {
+                        bootstrapCollapse.show();
+                        updateIcon(false);
+                    }
+
+                    // Listener para el botón de colapso
+                    button.addEventListener('click', function () {
+                        var isCollapsed = !cardBody.classList.contains('show');
+                        bootstrapCollapse.toggle();
+                        updateIcon(isCollapsed);
+                    });
+
+                    // Listener para el cambio de tamaño de la ventana
+                    window.addEventListener('resize', function () {
+                        isSmallScreen = window.innerWidth < 576;
+                        if (isSmallScreen) {
+                            bootstrapCollapse.hide(); // Colapsar en pantallas pequeñas
+                            updateIcon(true);
+                        } else {
+                            bootstrapCollapse.show(); // Expandir en pantallas grandes
+                            updateIcon(false);
+                        }
+                    });
+
+                    // Listener para sincronizar el icono con el estado del colapso
+                    cardBody.addEventListener('shown.bs.collapse', function () {
+                        updateIcon(false);
+                    });
+                    cardBody.addEventListener('hidden.bs.collapse', function () {
+                        updateIcon(true);
+                    });
+                });
+            });
+
         </script>
 
 
@@ -447,16 +546,16 @@ function formatearFecha(fecha) {
 
 
         <div class="text-center" style="font-size: 14px">
-            
+
             <i class="bi bi-piggy-bank"></i> PlataFácil - Registro de Clientes & Prestamos - 2024<br>
             <div style="font-size: 18px">
-            <i class="bi bi-filetype-html"></i>
-            <i class="bi bi-filetype-css"></i>
-            <i class="bi bi-filetype-js"></i>
-            <i class="bi bi-filetype-py"></i>
-            <i class="bi bi-filetype-sql"></i>
+                <i class="bi bi-filetype-html"></i>
+                <i class="bi bi-filetype-css"></i>
+                <i class="bi bi-filetype-js"></i>
+                <i class="bi bi-filetype-py"></i>
+                <i class="bi bi-filetype-sql"></i>
             </div>
-        
+
         </div>
 
     </div>
