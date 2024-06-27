@@ -1,0 +1,111 @@
+        body {
+
+            background: url('img/bg.png') center center #212529;
+            background-size: auto;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container-sm {
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(0px);
+            -webkit-backdrop-filter: blur(0px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            /*margin: 20px;*/
+            /*padding: 10px;*/
+        }
+
+
+        .card {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(var(--acrylic-blur, 0px));
+            margin: 0px auto;
+            width: 100%;
+        }
+
+
+        .navbar-brand {
+            font-size: 2em;
+        }
+
+        td,
+        th {
+            white-space: nowrap;
+            /* Impide el quiebre de línea */
+            word-break: break-word;
+            /* Permite el quiebre de palabra */
+        }
+
+        /*.round_table {
+            border-collapse: separate;
+            border: solid #BABABA 1px;
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 5px;
+        }*/
+
+        /*
+        Etiquet Details
+        */
+
+        .horizontal-details {
+            display: inline-block;
+            width: 200px;
+            /* Ajusta según tus necesidades */
+            overflow: hidden;
+            /* Ocultar contenido desbordante */
+            white-space: nowrap;
+            /* Evitar que el texto se envuelva */
+        }
+
+        .horizontal-details[open] {
+            width: 400px;
+            /* Ancho cuando está abierto */
+            transition: width 0.5s ease;
+            /* Animación de expansión */
+        }
+
+        .horizontal-details summary {
+            cursor: pointer;
+            outline: none;
+            /* Quita el borde de foco */
+            display: inline-block;
+            /* Para que el botón sea en línea */
+            white-space: nowrap;
+            /* Evitar que el texto se envuelva */
+        }
+
+        .horizontal-details .details-content {
+            display: inline-block;
+            /* Para que el contenido esté en línea */
+            visibility: hidden;
+            /* Ocultar contenido por defecto */
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .horizontal-details[open] .details-content {
+            visibility: visible;
+            /* Mostrar contenido cuando está abierto */
+            opacity: 1;
+        }
+
+        .horizontal-details summary::marker {
+            display: none;
+            /* Ocultar el marcador predeterminado */
+        }
+
+        .horizontal-details summary:after {
+            content: ' ';
+            /* Indicador personalizado */
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .horizontal-details[open] summary:after {
+            content: ' ';
+            /* Indicador personalizado para cuando está abierto */
+        }
