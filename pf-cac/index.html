@@ -65,6 +65,69 @@
             -moz-border-radius: 10px;
             -webkit-border-radius: 5px;
         }*/
+
+        /*
+        Etiquet Details
+        */
+
+        .horizontal-details {
+            display: inline-block;
+            width: 200px;
+            /* Ajusta según tus necesidades */
+            overflow: hidden;
+            /* Ocultar contenido desbordante */
+            white-space: nowrap;
+            /* Evitar que el texto se envuelva */
+        }
+
+        .horizontal-details[open] {
+            width: 400px;
+            /* Ancho cuando está abierto */
+            transition: width 0.5s ease;
+            /* Animación de expansión */
+        }
+
+        .horizontal-details summary {
+            cursor: pointer;
+            outline: none;
+            /* Quita el borde de foco */
+            display: inline-block;
+            /* Para que el botón sea en línea */
+            white-space: nowrap;
+            /* Evitar que el texto se envuelva */
+        }
+
+        .horizontal-details .details-content {
+            display: inline-block;
+            /* Para que el contenido esté en línea */
+            visibility: hidden;
+            /* Ocultar contenido por defecto */
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .horizontal-details[open] .details-content {
+            visibility: visible;
+            /* Mostrar contenido cuando está abierto */
+            opacity: 1;
+        }
+
+        .horizontal-details summary::marker {
+            display: none;
+            /* Ocultar el marcador predeterminado */
+        }
+
+        .horizontal-details summary:after {
+            content: ' ';
+            /* Indicador personalizado */
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .horizontal-details[open] summary:after {
+            content: ' ';
+            /* Indicador personalizado para cuando está abierto */
+        }
     </style>
 </head>
 
@@ -99,13 +162,14 @@
                                 <a class="nav-link" href="alta-cliente.html"><i class="bi bi-person-add"></i> Alta</a>
                             </li>
                         </ul>
-                        <form class="d-flex" role="search">
+                        <div class="d-flex" role="search">
                             <!--
                             <input
                                 class="form-control me-2 d-inline-flex focus-ring focus-ring-secondary py-1 px-2 text-decoration-none border rounded-2"
                                 type="search" placeholder="Buscar cliente..." id="buscarInputx" aria-label="Buscar cliente...">
                             <button class="btn btn-outline-dark disabled" type="submit"><i class="bi bi-search"></i></button>
                             -->
+
                             <div class="input-group mb-3 mt-3">
                                 <input type="text" data-bs-theme="dark" id="buscarInput"
                                     class="form-control focus-ring focus-ring-secondary py-1 px-2"
@@ -114,7 +178,7 @@
                                 <button class="btn btn-outline-dark disabled" type="button" id="button-addon2"><i
                                         class="bi bi-person"></i></button>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -224,13 +288,22 @@
                         type="search" placeholder="Buscar cliente..." id="buscarInputx" aria-label="Buscar cliente...">
                     <button class="btn btn-outline-dark disabled" type="submit"><i class="bi bi-search"></i></button>
                     -->
+
                     <div class="input-group">
-                        <input type="text" data-bs-theme="dark" id="buscarInput1"
-                            class="form-control focus-ring focus-ring-secondary py-1 px-2"
-                            placeholder="Buscar Cliente..." aria-label="Buscar cliente..."
-                            aria-describedby="button-addon2">
-                        <button class="btn btn-outline-dark disabled" type="button" id="button-addon2"><i
-                                class="bi bi-person"></i></button>
+                        <details class="horizontal-details">
+                            <summary> <button class="btn btn-outline-dark disabled" type="button" id="button-addon2"><i
+                                        class="bi bi-search"></i></button></summary>
+                            <div class="details-content">
+
+
+                                <input type="text" data-bs-theme="dark" id="buscarInput1"
+                                    class="form-control focus-ring focus-ring-secondary py-1 px-2"
+                                    placeholder="Buscar Cliente..." aria-label="Buscar cliente..."
+                                    aria-describedby="button-addon2">
+                            </div>
+                        </details>
+
+
                     </div>
                 </div>
                 <div class="card-body table-responsive">
