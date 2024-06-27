@@ -77,11 +77,12 @@
     cursor: pointer;
     background: #F3F3F3;
 }
+
     </style>
 </head>
 
 <body>
-    <div class="container-sm mt-4">
+    <div class="container-sm mt-4 mb-4">
         <div class="content-sm">
             <nav class="navbar navbar-expand-lg" style="border-bottom: 1px solid rgba(255, 255, 255, 0.3);">
                 <div class="container-fluid">
@@ -157,14 +158,14 @@
                                         <div class="col-sm mb-2">
                                             <div class="form-floating">
                                                 <input type="tel" class="form-control" id="telefono" name="telefono"
-                                                    placeholder="Teléfono" required>
+                                                    placeholder="Teléfono" pattern="^\(?\d{2,4}\)?[\s\-]?\d{6,8}$" title="Ingrese un número de teléfono válido en Argentina, p. ej., (11) 1234-5678 o 011-12345678." required>
                                                 <label for="telefono">Teléfono</label>
                                             </div>
                                         </div>
                                         <div class="col-sm mb-2">
                                             <div class="form-floating">
                                                 <input type="email" class="form-control" id="email" name="email"
-                                                    placeholder="Email" required>
+                                                    placeholder="Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Ingrese una dirección de correo electrónico válida." required>
                                                 <label for="email">Email</label>
                                             </div>
                                         </div>
@@ -174,7 +175,7 @@
                                         <div class="col-sm mb-2">
                                             <div class="form-floating">
                                                 <input type="text" class="form-control" id="dni" name="dni"
-                                                    placeholder="DNI" required>
+                                                    placeholder="DNI" pattern="^\d{7,8}$" title="Ingrese un número de DNI argentino válido (7 u 8 dígitos)." required>
                                                 <label for="dni">DNI</label>
                                             </div>
                                         </div>
@@ -196,8 +197,8 @@
                                     <div class="row">
                                         <div class="col-sm mb-2">
                                             <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="monto" name="monto"
-                                                    placeholder="Monto" required>
+                                                <input type="text" class="form-control" id="monto" name="monto"
+                                                    placeholder="Monto" pattern="^([1-9]\d{0,4}(\.\d{1,2})?|100000|100000\.0{1,2}|0\.0{1,2})$" title="Ingrese un monto válido hasta $100,000." required>
                                                 <label for="monto">Monto</label>
                                             </div>
                                         </div>
@@ -205,7 +206,7 @@
                                             <div class="form-floating mb-3">
                                                 <select class="form-select" id="estado" name="estado"
                                                     aria-label="Estado del préstamo" required>
-                                                    <option selected>Seleccione el estado</option>
+                                                    <option value="" selected disabled>Seleccione el estado</option>
                                                     <option value="Activo">Activo</option>
                                                     <option value="Pagado">Pagado</option>
                                                     <option value="Vencido">Vencido</option>

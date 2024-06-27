@@ -109,3 +109,21 @@
             content: ' ';
             /* Indicador personalizado para cuando está abierto */
         }
+
+                    /* Espaciado entre los fieldsets y elementos internos */
+        /*fieldset {
+            margin-bottom: 1rem;
+        }*/
+
+        fieldset legend {
+            /*margin-bottom: 0.5rem;*/
+            font-size: 1.2rem;
+        }
+
+        /*.round_table {
+            border-collapse: separate;
+            border: solid #BABABA 1px;
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 5px;
+        }*/
