@@ -6,7 +6,7 @@
 - 💼 _portfolio old-> ~@echo "old skills html+css 2010-2012 "
 - 💼 _portfolio old-> ~@echo "self-taught and seeker of challenges, returning to what I am passionate about... very soon fullstack"
 
-✨ NEW SKILLS 2010-2012 - HTML + CSS + JS ✨
+✨ OLD SKILLS 2010-2012 - HTML + CSS + JS ✨
 
 <a href="https://hache-dev.github.io/proyectos/arosil/">https://hache-dev.github.io/proyectos/arosil/</a>
 <a href="https://hache-dev.github.io/proyectos/arsinteriores/">https://hache-dev.github.io/proyectos/arsinteriores/</a>
