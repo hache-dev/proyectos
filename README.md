@@ -1,10 +1,6 @@
 # Algunos proyectos...
 
 <pre>
-- 👋 _start -> ~@echo
-- 👋 _welcome -> ~ my nickname is @hache-dev
-- 💼 _portfolio old-> ~@echo "old skills html+css 2010-2012 "
-- 💼 _portfolio old-> ~@echo "self-taught and seeker of challenges, returning to what I am passionate about... very soon fullstack"
 
 ✨ OLD SKILLS 2010-2012 - HTML + CSS + JS ✨
 
