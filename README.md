@@ -6,6 +6,8 @@
 - 💼 _portfolio old-> ~@echo "old skills html+css 2010-2012 "
 - 💼 _portfolio old-> ~@echo "self-taught and seeker of challenges, returning to what I am passionate about... very soon fullstack"
 
+✨ NEW SKILLS 2010-2012 - HTML + CSS + JS ✨
+
 <a href="https://hache-dev.github.io/proyectos/arosil/">https://hache-dev.github.io/proyectos/arosil/</a>
 <a href="https://hache-dev.github.io/proyectos/arsinteriores/">https://hache-dev.github.io/proyectos/arsinteriores/</a>
 <a href="https://hache-dev.github.io/proyectos/brancateam/">https://hache-dev.github.io/proyectos/brancateam/</a>
@@ -21,11 +23,11 @@
 <a href="https://hache-dev.github.io/proyectos/lab/">https://hache-dev.github.io/proyectos/lab/</a>
 
 
-- ✨ HTML + CSS + BOOSTRAP + JS + PY + FLASK + MYSQL
+✨ NEW SKILLS 2024 - HTML + CSS + BOOSTRAP + JS + PY + FLASK + MYSQL ✨
   
 <a href="https://hache-dev.github.io/proyectos/pf-adm/">https://hache-dev.github.io/proyectos/pf-adm/</a>
 <a href="https://hache-dev.github.io/proyectos/pf-cac/">https://hache-dev.github.io/proyectos/pf-cac/</a>
-<a href=">https://hache-dev.github.io/proyectos/pf-front/">https://hache-dev.github.io/proyectos/pf-front/</a>
+<a href="https://hache-dev.github.io/proyectos/pf-front/">https://hache-dev.github.io/proyectos/pf-front/</a>
 
 </pre>
 
